@@ -1,9 +1,10 @@
 import React from 'react';
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Projects from "../pages/Projects";
-import Contact from "../pages/Contact";
+import Home from "../../pages/Home";
+import About from "../../pages/About";
+import Projects from "../../pages/Projects";
+import Contact from "../../pages/Contact";
 import { Link, Route, Routes } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar(){
 	return (
