@@ -2,10 +2,12 @@ import React from 'react';
 
 export default function Navbar(){
 	return (
-		<>
-		<p>Home</p>
-		<p>Projects</p>
-		<p>Contact Me!</p>
-		</>
+		<div>
+			<ul>
+				<li>Home</li>
+				<li>Projects</li>
+				<li>Contact Me!</li>
+			</ul>
+		</div>
 	);
 }
