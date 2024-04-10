@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Navbar.scss";
 import { Link} from "react-router-dom";
+import homeIcon from "../assets/homeIcon.json";
+import Lottie from 'lottie-react';
 
 export default function Navbar(){
 	return (
