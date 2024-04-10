@@ -4,7 +4,7 @@ import About from "../../pages/About";
 import Projects from "../../pages/Projects";
 import Contact from "../../pages/Contact";
 import { Link, Route, Routes } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 export default function Navbar(){
 	return (
