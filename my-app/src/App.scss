@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  // background-color: #282c34;
 }
 
 .App-logo {
@@ -16,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #7F5539;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,8 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-nav{
-  background-color: #f82c34;
 }

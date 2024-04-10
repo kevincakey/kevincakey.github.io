@@ -1,14 +1,10 @@
 import React from 'react';
-import Home from "../../pages/Home";
-import About from "../../pages/About";
-import Projects from "../../pages/Projects";
-import Contact from "../../pages/Contact";
-import { Link, Route, Routes } from "react-router-dom";
 import "./Navbar.scss";
+import { Link} from "react-router-dom";
 
 export default function Navbar(){
 	return (
-		<div>
+		<div className="navbar">
 			<nav>
 				<ul>
 					<li>
@@ -25,12 +21,6 @@ export default function Navbar(){
 					</li>
 				</ul>
 			</nav>
-			<Routes>
-				<Route path="/" element={<Home></Home>}></Route>
-				<Route path="/About" element={<About></About>}></Route>
-				<Route path="/Projects" element={<Projects></Projects>}></Route>
-				<Route path="/Contact" element={<Contact></Contact>}></Route>
-			</Routes>
 		</div>
 	);
 }
