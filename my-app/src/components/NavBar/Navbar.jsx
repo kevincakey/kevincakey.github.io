@@ -2,6 +2,9 @@ import React from 'react';
 import "./Navbar.scss";
 import { Link} from "react-router-dom";
 import homeIcon from "../../assets/homeIcon.json";
+import aboutIcon from "../../assets/aboutIcon.json";
+import projectsIcon from "../../assets/projectsIcon.json";
+import contactIcon from "../../assets/contactIcon.json";
 import Lottie from 'lottie-react';
 
 export default function Navbar(){
@@ -13,13 +16,13 @@ export default function Navbar(){
 						<Link to="/"><Lottie animationData={homeIcon}/></Link>
 					</li>
 					<li>
-						<Link to="/About">About</Link>
+						<Link to="/About"><Lottie animationData={aboutIcon}/></Link>
 					</li>
 					<li>
-						<Link to="/Projects">Projects</Link>
+						<Link to="/Projects"><Lottie animationData={projectsIcon}/></Link>
 					</li>
 					<li>
-						<Link to="/Contact">Contact</Link>
+						<Link to="/Contact"><Lottie animationData={contactIcon}/></Link>
 					</li>
 				</ul>
 			</nav>
