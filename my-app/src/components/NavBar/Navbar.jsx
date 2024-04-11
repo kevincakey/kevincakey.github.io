@@ -7,7 +7,7 @@ import projectsIcon from "../../assets/projectsIcon.json";
 import contactIcon from "../../assets/contactIcon.json";
 import Lottie from 'lottie-react';
 
-export default function Navbar(){
+const Navbar = () => {
 	return (
 		<div className="navbar">
 			<nav>
@@ -29,3 +29,5 @@ export default function Navbar(){
 		</div>
 	);
 }
+
+export default Navbar;
