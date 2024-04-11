@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Navbar.scss";
 import { Link} from "react-router-dom";
-// import homeIcon from "../assets/homeIcon.json";
-// import Lottie from 'lottie-react';
+import homeIcon from "../../assets/homeIcon.json";
+import Lottie from 'lottie-react';
 
 export default function Navbar(){
 	return (
@@ -10,7 +10,7 @@ export default function Navbar(){
 			<nav>
 				<ul>
 					<li>
-						<Link to="/">Home</Link>
+						<Link to="/"><Lottie animationData={homeIcon}/></Link>
 					</li>
 					<li>
 						<Link to="/About">About</Link>
