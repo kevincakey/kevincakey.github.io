@@ -1,35 +1,63 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Navbar.scss";
 import { Link} from "react-router-dom";
-import homeIcon from "../../assets/homeIcon.json";
-import aboutIcon from "../../assets/aboutIcon.json";
-import projectsIcon from "../../assets/projectsIcon.json";
-import contactIcon from "../../assets/contactIcon.json";
+import homeIcon from "../../assets/homeIcon.lottie";
+import aboutIcon from "../../assets/aboutIcon.lottie";
+import projectsIcon from "../../assets/projectsIcon.lottie";
+import contactIcon from "../../assets/contactIcon.lottie";
 import Lottie from 'lottie-react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
 
 const Navbar = () => {
-
-	const [hoverHome, setHoverHome] = useState(false);
-	const [hoverAbout, setHoverAbout] = useState(false);
-	const [hoverProjects, setHoverProjects] = useState(false);
-	const [hoverContact, setHoverContact] = useState(false);
-	
 
 	return (
 		<div className="navbar">
 			<nav>
 				<ul>
 					<li>
-						<Link to="/"><Lottie animationData={homeIcon} loop={hoverHome}/></Link>
+						<Link to="/">
+							<DotLottiePlayer
+							src={homeIcon}
+							loop
+							hover
+							background="transparent"
+							>
+							</DotLottiePlayer>
+						</Link>
 					</li>
 					<li>
-						<Link to="/About"><Lottie animationData={aboutIcon} loop={hoverAbout}/></Link>
+						<Link to="/About">
+							<DotLottiePlayer
+							src={aboutIcon}
+							loop
+							hover
+							background="transparent"
+							>
+							</DotLottiePlayer>
+							</Link>
 					</li>
 					<li>
-						<Link to="/Projects"><Lottie animationData={projectsIcon} loop={hoverProjects}/></Link>
+						<Link to="/Projects">
+							<DotLottiePlayer
+							src={projectsIcon}
+							loop
+							hover
+							background="transparent"
+							>
+							</DotLottiePlayer>
+						</Link>
 					</li>
 					<li>
-						<Link to="/Contact"><Lottie animationData={contactIcon} loop={hoverContact}/></Link>
+						<Link to="/Contact">
+							<DotLottiePlayer
+							src={contactIcon}
+							loop
+							hover
+							background="transparent"
+							>
+							</DotLottiePlayer>
+						</Link>
 					</li>
 				</ul>
 			</nav>
