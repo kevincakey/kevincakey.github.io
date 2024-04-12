@@ -5,7 +5,6 @@ import homeIcon from "../../assets/homeIcon.lottie";
 import aboutIcon from "../../assets/aboutIcon.lottie";
 import projectsIcon from "../../assets/projectsIcon.lottie";
 import contactIcon from "../../assets/contactIcon.lottie";
-import Lottie from 'lottie-react';
 import { DotLottiePlayer } from '@dotlottie/react-player';
 import '@dotlottie/react-player/dist/index.css';
 
