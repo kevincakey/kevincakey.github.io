@@ -1,12 +1,11 @@
 .navbar{
 	background: #9C6644;
-	width: 840px;
-	height:100%;
+	width: 100%;
 	position:fixed;
-	bottom:0;
+	top:0;
 	right:0px;
 	z-index: 3;
-	min-height: 500px;
+	min-height: 100px;
 	display:flex;
 	justify-content: space-around;
 }
