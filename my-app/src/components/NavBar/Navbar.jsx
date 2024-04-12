@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Navbar.scss";
 import { Link} from "react-router-dom";
-import homeIcon from "../../assets/homeIcon.lottie";
-import aboutIcon from "../../assets/aboutIcon.lottie";
-import projectsIcon from "../../assets/projectsIcon.lottie";
-import contactIcon from "../../assets/contactIcon.lottie";
+import homeIcon from "../../assets/icons/homeIcon.lottie";
+import aboutIcon from "../../assets/icons/aboutIcon.lottie";
+import projectsIcon from "../../assets/icons/projectsIcon.lottie";
+import contactIcon from "../../assets/icons/contactIcon.lottie";
 import { DotLottiePlayer } from '@dotlottie/react-player';
 import '@dotlottie/react-player/dist/index.css';
 
