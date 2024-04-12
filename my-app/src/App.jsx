@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Navbar from "./components/NavBar/Navbar";
+import Banner from "./components/Banner/Banner";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
+      <Banner></Banner>
       <div className="App-header">
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
