@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faAngular,
 	faCss3,
 	faGitAlt,
 	faHtml5,
@@ -14,6 +13,9 @@ import {
 const About = () => {
   return (
 	<>
+		<p>
+			INTRO AND BIO AND SHORT PERSONAL MESSAGE ABOUT MY CAREER
+		</p>
 		<ul>
 			<li>
 				<FontAwesomeIcon icon={faHtml5} color="#F06529" />
