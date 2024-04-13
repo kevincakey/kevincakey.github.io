@@ -19,6 +19,8 @@
 .App-header {
   background-color: #7F5539;
   min-height: 100vh;
+  width: 50%;
+  top:100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,4 +40,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: 'skincake';
+  src: url('./assets/fonts/skincake/Skincake.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'coffeecake';
+  src: url('./assets/fonts/coffecake/CoffeCake.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Rancho';
+  src: url('./assets/fonts/Rancho/Rancho-Regular.ttf') format('ttf');
 }
