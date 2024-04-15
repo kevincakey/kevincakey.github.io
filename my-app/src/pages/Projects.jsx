@@ -22,10 +22,10 @@ const Projects = () => {
 
   return (
     <>
-      <ProjectCard icons={iconData}>
-        Testing
+      <ProjectCard icons={iconData} name="FirstProject">
+        Description1
       </ProjectCard>
-      <ProjectCard>Testing1</ProjectCard>
+      <ProjectCard name="SecondProject">Description2</ProjectCard>
     </>
   );
 }
