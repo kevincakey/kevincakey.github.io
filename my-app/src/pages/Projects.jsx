@@ -22,9 +22,11 @@ const Projects = () => {
 
   return (
     <>
-      <ProjectCard icons={iconData} name="FirstProject">
-        Description1
-      </ProjectCard>
+      <a target="_blank" rel="noreferrer" href="https://github.com/kevincakey/MessagingApp">
+        <ProjectCard icons={iconData} name="Messaging App">
+          MERN MongoDB, Express, React, Node Messaging App
+        </ProjectCard>
+      </a>
       <ProjectCard name="SecondProject">Description2</ProjectCard>
     </>
   );
