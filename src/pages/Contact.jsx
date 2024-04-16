@@ -1,6 +1,7 @@
 import React from 'react'
 import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
+import Map from "../components/Map/Map.jsx"
 
 const Contact = () => {
 
@@ -43,6 +44,7 @@ const Contact = () => {
         </ul>
       </form>
     </div>
+    <Map/>
   </>
   )
 }

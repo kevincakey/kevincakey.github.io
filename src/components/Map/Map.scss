@@ -1,0 +1,27 @@
+#map { 
+	min-height: 180px;
+	min-width:200px;
+	z-index: 11;
+}
+
+.leaflet-container{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	opacity: 10;
+	animation:backInRight 1s 1.2s;
+	animation-fill-mode: forwards;
+	z-index: 11;
+}
+
+.leaflet-pane{
+	width: 100%;
+	height: 100vh;
+	z-index: 11;
+}
+
+.leaflet-control-container{
+	width: 100%;
+	height: 100vh;
+	z-index: 11;
+}
