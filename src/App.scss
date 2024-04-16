@@ -49,10 +49,25 @@
 
 @font-face {
   font-family: 'coffeecake';
-  src: url('./assets/fonts/coffecake/CoffeCake.ttf') format('ttf');
+  src: url('./assets/fonts/coffecake/CoffeCake.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Rancho';
-  src: url('./assets/fonts/Rancho/Rancho-Regular.ttf') format('ttf');
+  src: url('./assets/fonts/Rancho/Rancho-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Patrick_Hand';
+  src: url('./assets/fonts/Patrick_Hand/PatrickHand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'blackjack';
+  src: url('./assets/fonts/blackjack/blackjack.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Itim';
+  src: url('./assets/fonts/Itim/Itim-Regular.ttf') format('truetype');
 }
