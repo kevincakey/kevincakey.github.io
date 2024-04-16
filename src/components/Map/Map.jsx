@@ -9,9 +9,9 @@ import { Popup } from 'react-leaflet/Popup'
 const Map = () => {
   return (
 	<div id="map">
-		<MapContainer center={[44, 19]} zoom={13}>
+		<MapContainer center={[	37.56, -122.05]} zoom={13}>
 			<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
-			<Marker position={[44,19]}>
+			<Marker position={[37.56,-122.05]}>
 				<Popup>Test1</Popup>
 			</Marker>
 		</MapContainer>
