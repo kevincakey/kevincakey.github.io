@@ -13,7 +13,7 @@ import {
 const About = () => {
   return (
 	<>
-		<h1>ABOUT</h1>
+		<h1 className="title">About</h1>
 		<p>
 			INTRO AND BIO AND SHORT PERSONAL MESSAGE ABOUT MY CAREER
 		</p>

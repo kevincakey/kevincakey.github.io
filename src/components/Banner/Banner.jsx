@@ -10,8 +10,7 @@ import {faLinkedin,faGithub} from '@fortawesome/free-brands-svg-icons'
 const Banner = () => {
     return (
         <div id="banner">
-			<h1>Kevin Gao</h1>
-			<h2>Hi! I'm a student learning software/web development and data analysis. Open to opportunities and website development contracting. Add me to your team!</h2>
+			<h1 id="banner-name">Kevin Gao</h1>
             <a id="downloadIcon" href={resume} target="_blank" rel="noreferrer" download="Kevin_Gao's_Resume">
 				<DotLottiePlayer
 				src={downloadIcon}

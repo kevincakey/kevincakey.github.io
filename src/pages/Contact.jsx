@@ -22,7 +22,7 @@ const Contact = () => {
 
   return (
 	<>
-    <h1>Contact</h1>
+    <h1 className="title">Contact</h1>
     <div className="contactForm">
       <form onSubmit={sendEmail}>
         <ul>

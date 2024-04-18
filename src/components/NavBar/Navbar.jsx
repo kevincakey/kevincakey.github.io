@@ -11,9 +11,9 @@ import '@dotlottie/react-player/dist/index.css';
 const Navbar = () => {
 
 	return (
-		<div className="navbar">
+		<div className="navbar-container">
 			<nav>
-				<ul>
+				<ul id="navbar-icons">
 					<li>
 						<Link to="/">
 							<DotLottiePlayer

@@ -2,11 +2,10 @@
 
 #banner {
     background-color: #ddb892;
-    width: 50%;
+    width: 45%;
     height: 100%;
     position: fixed; /* Use fixed positioning */
-    top: 100px;
-    right: 0;
+    right: 100px;
     z-index: 2;
 }
 
@@ -15,8 +14,13 @@
 	display:inline-block;
 }
 
-h1 {
+#banner-name {
+    font-size: 100px;
     font-family: 'coffeecake';
+    margin: 0;
+    top: 50px;
+    align-items: center;
+    position: relative;
 }
 
 h2{

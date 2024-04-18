@@ -6,15 +6,17 @@ import cakeAnimation from "../assets/icons/cakeAnimation.lottie";
 
 const Home = () => {
   return (
-    <><h1>Home</h1>
-    <DotLottiePlayer
+    <div id="HomeContainer">
+    <div className="lottie-container">
+      <DotLottiePlayer
 							src={cakeAnimation}
               autoplay
-							loop
               speed = "2"
 							background="transparent"
 							>
-							</DotLottiePlayer></>
+			</DotLottiePlayer>
+    </div>
+    </div>
   )
 }
 

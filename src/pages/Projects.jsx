@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-      <h1>Projects</h1>
+      <h1 className="title">Projects</h1>
       <a target="_blank" rel="noreferrer" href="https://github.com/kevincakey/MessagingApp">
         <ProjectCard icons={iconData} name="Messaging App">
           MERN MongoDB, Express, React, Node Messaging App
