@@ -1,33 +1,55 @@
 import "./Banner.scss";
 import React from 'react';
 import resume from "../../assets/KevinGao'sResume.pdf";
+import { Link } from 'react-router-dom';
 import { DotLottiePlayer } from '@dotlottie/react-player';
 import '@dotlottie/react-player/dist/index.css';
+import resumeIcon from "../../assets/icons/resumeIcon.lottie";
 import downloadIcon from "../../assets/icons/downloadIcon.lottie";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLinkedin,faGithub} from '@fortawesome/free-brands-svg-icons'
 
 const Banner = () => {
     return (
-        <div id="banner">
-			<h1 id="banner-name">Kevin Gao</h1>
-            <a id="downloadIcon" href={resume} target="_blank" rel="noreferrer" download="Kevin_Gao's_Resume">
+    	<div id="banner">
+			<div id="topCake"></div>
+			<div id="bannerBody">
+				<p id="bannerText">Hi! I am an aspiring developer and cs student</p>
+				<Link to="/contact" id="contactButton" className="links">
+					Add me to your team !
+				</Link>
+				<a className="links" id="view-resume-link" href={resume} target="_blank" rel="noreferrer">
 				<DotLottiePlayer
-				src={downloadIcon}
-				loop
-				hover
-				background="transparent"
-				>
-				</DotLottiePlayer>
-			</a>
-			<a href={resume} target="_blank" rel="noreferrer">View Resume</a>
-			<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kevincakey/">
-				<FontAwesomeIcon icon={faLinkedin} size="lg" style={{color: "#74C0FC",}} />
-			</a>
-			<a target="_blank" rel="noreferrer" href="https://github.com/kevincakey">
-				<FontAwesomeIcon icon={faGithub} size="lg" style={{color: "#74C0FC",}} />
-			</a>
-        </div>
+						id="resumeIcon"
+						src={resumeIcon}
+						autoplay
+						loop
+						hover
+						background="transparent"
+					/>
+				</a>
+			</div>
+			<div id="cakeBase">
+				<div className="social-icons" id="github">
+					<a className="links" target="_blank" rel="noreferrer" href="https://github.com/kevincakey">
+						<FontAwesomeIcon id="github-icon" icon={faGithub} size="lg" style={{color: "#ddb892",}} />
+						https://github.com/kevincakey
+					</a>
+				</div>
+				<div className="social-icons" id="linkedin">
+					<a className="links" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kevincakey/">
+						<FontAwesomeIcon id="linkedin-icon" icon={faLinkedin} size="lg" style={{color: "#ddb892",}} />
+						https://www.linkedin.com/in/kevincakey/
+					</a> 
+				</div>
+				<a id="resume-link" href={resume} target="_blank" rel="noreferrer" download="Kevin_Gao's_Resume">
+					<button id="resume-button" className="links">
+						Download
+					</button>
+				</a>
+			</div>
+		</div>
+
     );
 }
 
