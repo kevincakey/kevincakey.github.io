@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Navbar.scss";
-import { Link} from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import homeIcon from "../../assets/icons/homeIcon.lottie";
 import aboutIcon from "../../assets/icons/aboutIcon.lottie";
 import projectsIcon from "../../assets/icons/projectsIcon.lottie";
@@ -9,9 +9,25 @@ import { DotLottiePlayer } from '@dotlottie/react-player';
 import '@dotlottie/react-player/dist/index.css';
 
 const Navbar = () => {
+	const location = useLocation();
+	const currentPath = location.pathname;
+
+	let navbarClass = "navbar-container";
+
+    // Add additional conditions as needed for different routes
+    if (currentPath === "/") {
+        navbarClass += " home-route";
+    } else if (currentPath === "/About") {
+        navbarClass += " about-route";
+    } else if (currentPath === "/Projects") {
+        navbarClass += " projects-route";
+    } else if (currentPath === "/Contact") {
+        navbarClass += " contact-route";
+    }
 
 	return (
-		<div className="navbar-container">
+		<div className={navbarClass}>
+			<div id="topCake"></div>
 			<nav>
 				<ul id="navbar-icons">
 					<li>
@@ -60,6 +76,7 @@ const Navbar = () => {
 					</li>
 				</ul>
 			</nav>
+			<div id="cakeBase"></div>
 		</div>
 	);
 }
