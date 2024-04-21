@@ -54,24 +54,28 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link to="/Projects">
-							<DotLottiePlayer
-							src={projectsIcon}
-							loop
-							hover
-							background="transparent"
-							>
-							</DotLottiePlayer>
+							<div className="icon-background">
+								<DotLottiePlayer
+								src={projectsIcon}
+								loop
+								hover
+								background="transparent"
+								>
+								</DotLottiePlayer>
+							</div>
 						</Link>
 					</li>
 					<li>
 						<Link to="/Contact">
-							<DotLottiePlayer
-							src={contactIcon}
-							loop
-							hover
-							background="transparent"
-							>
-							</DotLottiePlayer>
+							<div className="icon-background">
+								<DotLottiePlayer
+								src={contactIcon}
+								loop
+								hover
+								background="transparent"
+								>
+								</DotLottiePlayer>
+							</div>
 						</Link>
 					</li>
 				</ul>
