@@ -1,12 +1,9 @@
 import React from "react";
 import "./Contact.scss";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Map from "../../components/Map/Map.jsx";
 
 const Contact = () => {
-  // const refForm = useRef()
-
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
@@ -33,10 +30,10 @@ const Contact = () => {
       <div className="contactForm">
         <form onSubmit={sendEmail}>
           <ul>
-            <li>
+            <li className="half">
               <input type="text" name="name" placeholder="Name" required />
             </li>
-            <li>
+            <li className="half">
               <input type="email" name="email" placeholder="Email" required />
             </li>
             <li>
@@ -60,7 +57,7 @@ const Contact = () => {
           </ul>
         </form>
       </div>
-      <Map />
+      <Map id="map" />
     </div>
   );
 };
