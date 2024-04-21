@@ -27,7 +27,7 @@ const Banner = () => {
 				</div>
 			</div>
 			<div id="bannerBody">
-				<p id="bannerText">Hi! I am an aspiring developer and cs student</p>
+				<p id="bannerText">Hi! I am Kevin Gao <br/> Aspiring Developer <br/> MS student</p>
 				<Link to="/Contact" id="contactButton" className="links">
 					Add me to your team !
 				</Link>
