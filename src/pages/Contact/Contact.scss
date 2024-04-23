@@ -14,74 +14,79 @@
 	ul {
 		list-style: none;
 		padding: 0;
+	}
+	li {
+	margin-bottom: 20px;
+	// overflow: hidden;
+	}
 
-		li {
-		margin-bottom: 20px;
-		clear:both;
-		// overflow: hidden;
-
-		input[type='text'],
-		input[type='email'],
-		input[type='submit'] {
-			width: 100%;
-			padding: 10px;
-			border: 2px solid #ddb892;
-			border-radius: 8px;
-			font-family: 'itim';
-			font-size: 1rem;
-			color: #ddb892;
-			background-color: transparent;
-			&::placeholder {
-			color: #ddb892; /* Light brown color */
-			}
+	input[type='text'],
+	input[type='email'],
+	input[type='submit'] {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		border: 2px solid #ddb892;
+		border-radius: 8px;
+		font-family: 'itim';
+		font-size: 1rem;
+		color: #ddb892;
+		background-color: transparent;
+		&::placeholder {
+		color: #ddb892; /* Light brown color */
 		}
+	}
 
-		input[type='submit'] {
-			cursor: pointer;
-			transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-			background-color: #ddb892; /* Match the theme color */
-			color: #fff;
+	input[type='text'],
+	input[type='email']{
+		width:98%;
+	}
 
-			&:hover {
-			background-color: #9c6644; /* Match the theme color */
-			border-color: #9c6644; /* Match the theme color */
-			}
-		}
+	input[type='submit'] {
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+		background-color: #ddb892; /* Match the theme color */
+		color: #fff;
 
-		textarea {
-			width: 100%;
-			padding: 10px;
-			border: 2px solid #ddb892;
-			border-radius: 8px;
-			font-family: 'itim';
-			font-size: 1rem;
-			color: #ddb892;
-			background-color: transparent;
-			resize: vertical;
-			&::placeholder {
-			color: #ddb892; /* Light brown color */
-			}
+		&:hover {
+		background-color: #9c6644; /* Match the theme color */
+		border-color: #9c6644; /* Match the theme color */
 		}
+	}
+
+	textarea {
+		width: 97%;
+		padding: 10px;
+		border: 2px solid #ddb892;
+		border-radius: 8px;
+		font-family: 'itim';
+		font-size: 1rem;
+		color: #ddb892;
+		background-color: transparent;
+		resize: vertical;
+		&::placeholder {
+		color: #ddb892; /* Light brown color */
 		}
+	}
+	}
 		li.half{
-			width:49%;
-			margin-left: 2%;
+			width:47%;
+			margin-right: 20px;
 			float:left;
 			clear:none;
 
 			&:first-child{
-				margin-left:0px;
+				margin-left:5px;
 			}
 		}
 	}
-	}
-}
 
   
   
   #map {
 	position: absolute;
-	left: -4px; /* Adjust the left offset as needed */
+	left: 0px; /* Adjust the left offset as needed */
 	right: 0;
 	bottom: 30px;
 	width: 100%; /* Adjust the width to account for the left offset */
