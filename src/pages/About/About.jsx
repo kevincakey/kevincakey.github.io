@@ -33,22 +33,22 @@ const About = () => {
         </h3>
         <ul>
           <li>
-            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+            <FontAwesomeIcon className="svgIcons" icon={faHtml5} color="#F06529" />
           </li>
           <li>
-            <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+            <FontAwesomeIcon className="svgIcons" icon={faCss3} color="#28A4D9" />
           </li>
           <li>
-            <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+            <FontAwesomeIcon className="svgIcons" icon={faReact} color="#5ED4F4" />
           </li>
           <li>
-            <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            <FontAwesomeIcon className="svgIcons" icon={faJsSquare} color="#EFD81D" />
           </li>
           <li>
-            <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            <FontAwesomeIcon className="svgIcons" icon={faGitAlt} color="#EC4D28" />
           </li>
           <li>
-            <FontAwesomeIcon icon={faSass} />
+            <FontAwesomeIcon className="svgIcons" icon={faSass} />
           </li>
           <li>
             <PythonIcon className="svgIcons" />
