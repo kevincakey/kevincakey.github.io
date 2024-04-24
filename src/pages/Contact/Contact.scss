@@ -8,7 +8,7 @@
 .contactForm {
 	padding:100px;
 	margin-bottom: 40px;
-	margin-top: 150px; /* Adjust the top margin to push the form above the map */
+	margin-top: 100px; /* Adjust the top margin to push the form above the map */
 
 	form {
 	ul {
@@ -21,8 +21,7 @@
 		// overflow: hidden;
 
 		input[type='text'],
-		input[type='email'],
-		input[type='submit'] {
+		input[type='email'] {
 			width: 100%;
 			padding: 10px;
 			border: 2px solid #ddb892;
@@ -37,6 +36,17 @@
 		}
 
 		input[type='submit'] {
+			width: 20%;
+			padding: 10px;
+			border: 2px solid #ddb892;
+			border-radius: 8px;
+			font-family: 'itim';
+			font-size: 1rem;
+			color: #ddb892;
+			background-color: transparent;
+			&::placeholder {
+			color: #ddb892; /* Light brown color */
+			}
 			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 			background-color: #ddb892; /* Match the theme color */
@@ -64,8 +74,9 @@
 		}
 		}
 		li.half{
-			width:49%;
-			margin-left: 2%;
+			width:45%;
+			margin-left: 300px;
+			margin-right: 26px;
 			float:left;
 			clear:none;
 
@@ -85,7 +96,7 @@
 	right: 0;
 	bottom: 30px;
 	width: 100%; /* Adjust the width to account for the left offset */
-	height: 300px;
+	height: 200px;
 	border-radius: 20px;
 	z-index: 1;
   }
