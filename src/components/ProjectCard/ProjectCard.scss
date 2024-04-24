@@ -1,0 +1,53 @@
+.card {
+	position: absolute; /* Positioning context for absolute positioning */
+	padding: 20px;
+	border: 2px solid #ddb892; /* Border color */
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+	transition: box-shadow 0.3s;
+	height: 150px; /* Set card height */
+	width: 150px; /* Set card width */
+	overflow: hidden; /* Hide overflow content */
+	display: flex; /* Use flexbox for alignment */
+	flex-direction: column; /* Arrange content vertically */
+	opacity: 0; /* Hide by default */
+	transition: opacity 0.3s;
+}
+
+.card-container:hover .card {
+	opacity: 1; /* Show on hover */
+}
+
+h3 {
+	margin-bottom: 10px;
+	color: #9c6644; /* Heading color */
+}
+
+/* Style links within the card */
+a {
+	position: relative;
+	color: #9c6644; /* Link color */
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #5e391f; /* Change color on hover */
+}
+
+/* Position the icon-wrapper and card absolutely */
+.card .icon-wrapper,
+.card {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 200px; /* Set card height */
+	width: 200px;
+}
+
+/* Change icon colors */
+.svg-inline--fa {
+	color: #9c6644; /* Icon color */
+}
+
+/* Resize icons */

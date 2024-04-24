@@ -8,9 +8,15 @@ import {
   faJsSquare,
   faReact,
   faSass,
-  faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import pythonIcon from "../../assets/icons/pythonIcon.jsx";
+import { ReactComponent as PythonIcon } from "../../assets/icons/pythonIcon.svg";
+import { ReactComponent as ExpressIcon } from "../../assets/icons/expressIcon.svg";
+import { ReactComponent as JavaIcon } from "../../assets/icons/javaIcon.svg";
+import { ReactComponent as JQueryIcon } from "../../assets/icons/jQueryIcon.svg";
+import { ReactComponent as NodejsIcon } from "../../assets/icons/nodejsIcon.svg";
+import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg";
+import { ReactComponent as SQLIcon } from "../../assets/icons/sqlIcon.svg";
+import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.svg";
 
 const About = () => {
   return (
@@ -45,11 +51,29 @@ const About = () => {
             <FontAwesomeIcon icon={faSass} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faPython} />
+            <PythonIcon className="svgIcons" />
           </li>
-          {/* <li>
-          <pythonIcon id="pythonIcon" />
-        </li> */}
+          <li>
+            <ExpressIcon className="svgIcons" />
+          </li>
+          <li>
+            <JavaIcon className="svgIcons" />
+          </li>
+          <li>
+            <JQueryIcon className="svgIcons" />
+          </li>
+          <li>
+            <MongoDBIcon className="svgIcons" />
+          </li>
+          <li>
+            <NodejsIcon className="svgIcons" />
+          </li>
+          <li>
+            <PandasIcon className="svgIcons" />
+          </li>
+          <li>
+            <SQLIcon className="svgIcons" />
+          </li>
         </ul>
       </div>
     </div>
