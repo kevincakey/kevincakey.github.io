@@ -29,32 +29,23 @@ const Contact = () => {
       <h1 className="title">Contact</h1>
       <div className="contactForm">
         <form onSubmit={sendEmail}>
-          <ul>
-            <li className="half">
-              <input type="text" name="name" placeholder="Name" required />
-            </li>
-            <li className="half">
-              <input type="email" name="email" placeholder="Email" required />
-            </li>
-            <li>
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                required
-              />
-            </li>
-            <li>
-              <textarea
-                placeholder="Message"
-                name="message"
-                required
-              ></textarea>
-            </li>
-            <li>
-              <input type="submit" value="SEND" />
-            </li>
-          </ul>
+          <input
+            className="half"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            className="half"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea placeholder="Message" name="message" required></textarea>
+          <input type="submit" value="SEND" />
         </form>
       </div>
       <Map id="map" />
