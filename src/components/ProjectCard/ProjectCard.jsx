@@ -1,8 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ProjectCard.scss";
-import { DotLottiePlayer } from "@dotlottie/react-player";
-import "@dotlottie/react-player/dist/index.css";
 
 const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
   return (
@@ -13,15 +11,7 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
         rel="noopener noreferrer"
         className="card-link"
       >
-        <div className="icon-wrapper">
-          <DotLottiePlayer
-            src={emblem}
-            loop
-            hover
-            speed="2"
-            background="transparent"
-          ></DotLottiePlayer>
-        </div>
+        <div className="icon-wrapper">{emblem}</div>
         <div className="card" style={{ border: "1px solid" }}>
           <h3>{name}</h3>
           {icons &&

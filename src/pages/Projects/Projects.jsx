@@ -11,11 +11,11 @@ import {
   faSass,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import cameraIcon from "../../assets/icons/cameraIcon.lottie";
-import forkIcon from "../../assets/icons/forkIcon.lottie";
-import heartIcon from "../../assets/icons/heartIcon.lottie";
-import messagingIcon from "../../assets/icons/messagingIcon.lottie";
-import puzzleIcon from "../../assets/icons/puzzleIcon.lottie";
+import { ReactComponent as ChatIcon } from "../../assets/icons/chatIcon.svg";
+import { ReactComponent as ForkIcon } from "../../assets/icons/fork.svg";
+import { ReactComponent as LikeIcon } from "../../assets/icons/likeIcon.svg";
+import { ReactComponent as PearIcon } from "../../assets/icons/pearIcon.svg";
+import { ReactComponent as PuzzleIcon } from "../../assets/icons/puzzleIcon.svg";
 
 const Projects = () => {
   const iconData = [
@@ -31,7 +31,7 @@ const Projects = () => {
       <h1 className="title">Projects</h1>
       <ProjectCard
         icons={iconData}
-        emblem={messagingIcon}
+        emblem={<ChatIcon></ChatIcon>}
         website={"https://github.com/kevincakey/MessagingApp"}
         name="Messaging App"
       >
@@ -39,22 +39,22 @@ const Projects = () => {
       </ProjectCard>
       <ProjectCard
         name="Fork"
-        emblem={forkIcon}
+        emblem={<ForkIcon />}
         website="https://github.com/kevincakey/CS180-Fork"
       ></ProjectCard>
       <ProjectCard
         name="Zoomies"
-        emblem={cameraIcon}
+        emblem={<PearIcon />}
         website="https://github.com/kevincakey/Zoomies"
       ></ProjectCard>
       <ProjectCard
         name="Collaborative Recommender System"
-        emblem={heartIcon}
+        emblem={<LikeIcon />}
         website="https://github.com/kevincakey/CollaborativeRecommenderSystem"
       ></ProjectCard>
       <ProjectCard
         name="8-puzzle search"
-        emblem={puzzleIcon}
+        emblem={<PuzzleIcon />}
         website="https://github.com/kevincakey/EightPuzzleSearch"
       ></ProjectCard>
     </div>
