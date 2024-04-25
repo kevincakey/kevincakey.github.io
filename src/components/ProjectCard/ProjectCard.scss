@@ -1,6 +1,7 @@
 .card {
 	position: absolute; /* Positioning context for absolute positioning */
 	padding: 20px;
+	top:0;
 	border: 2px solid #ddb892; /* Border color */
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
@@ -34,20 +35,3 @@ a {
 a:hover {
 	color: #5e391f; /* Change color on hover */
 }
-
-/* Position the icon-wrapper and card absolutely */
-.card .icon-wrapper,
-.card {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 200px; /* Set card height */
-	width: 200px;
-}
-
-/* Change icon colors */
-.svg-inline--fa {
-	color: #9c6644; /* Icon color */
-}
-
-/* Resize icons */

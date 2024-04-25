@@ -31,7 +31,7 @@ const About = () => {
           Open to full/part-time jobs, internships, website contracting, and
           private tutoring !!link secret teaching resume!!.
         </h3>
-        <ul>
+        <ul className="icon-grid">
           <li>
             <FontAwesomeIcon className="svgIcons" icon={faHtml5} color="#F06529" />
           </li>
@@ -73,6 +73,9 @@ const About = () => {
           </li>
           <li>
             <SQLIcon className="svgIcons" />
+          </li>
+          <li>
+            C++
           </li>
         </ul>
       </div>
