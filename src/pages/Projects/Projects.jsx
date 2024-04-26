@@ -35,7 +35,7 @@ const Projects = () => {
         website={"https://github.com/kevincakey/MessagingApp"}
         name="Messaging App"
       >
-        MERN MongoDB, Express, React, Node Messaging App
+        {/* MERN MongoDB, Express, React, Node Messaging App */}
       </ProjectCard>
       <ProjectCard
         name="Fork"

@@ -1,5 +1,5 @@
 .card {
-	position: absolute; /* Positioning context for absolute positioning */
+	position: relative; /* Positioning context for absolute positioning */
 	padding: 20px;
 	top:0;
 	border: 2px solid #ddb892; /* Border color */
@@ -11,7 +11,6 @@
 	overflow: hidden; /* Hide overflow content */
 	display: flex; /* Use flexbox for alignment */
 	flex-direction: column; /* Arrange content vertically */
-	opacity: 0; /* Hide by default */
 	transition: opacity 0.3s;
 }
 
@@ -20,7 +19,8 @@
 }
 
 h3 {
-	margin-bottom: 10px;
+	margin-top:40px;
+	font-size: 1.5rem;
 	color: #9c6644; /* Heading color */
 }
 
@@ -36,7 +36,11 @@ a:hover {
 	color: #5e391f; /* Change color on hover */
 }
 
-.icon-wrapper{
-	width: 100%;
-	height: 100px;
-}
+.emblem-wrapper {
+	position: absolute; /* Position the emblem relatively within the card */
+	top: 10px; /* Adjust top position */
+	right: 10px; /* Adjust right position */
+	width: 50px;
+	height: 50px;
+	z-index: 5;
+  }

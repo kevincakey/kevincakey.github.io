@@ -11,18 +11,20 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
         rel="noopener noreferrer"
         className="card-link"
       >
-        <div className="icon-wrapper">{emblem}</div>
         <div className="card" style={{ border: "1px solid" }}>
+          <div className="emblem-wrapper">{emblem}</div>
           <h3>{name}</h3>
-          {icons &&
-            icons.map(({ icon, color }, index) => (
-              <FontAwesomeIcon
-                icon={icon}
-                key={index}
-                style={{ color: color }}
-              />
-            ))}
-          {children}
+          <div className="icon-wrapper">
+            {icons &&
+              icons.map(({ icon, color }, index) => (
+                <FontAwesomeIcon
+                  icon={icon}
+                  key={index}
+                  style={{ color: color }}
+                />
+              ))}
+            {children}
+          </div>
         </div>
       </a>
     </div>
