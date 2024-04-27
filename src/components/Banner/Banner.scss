@@ -1,11 +1,11 @@
 #banner {
     background-color: #ddb892;
-    width: 40%;
-    height: 100%;
+    width: 45vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     position: fixed; /* Use fixed positioning */
-    right: 10%;
+    right: 5vw;
     z-index: 2;
 }
 
@@ -22,12 +22,12 @@
 }
 
 #topCake {
-    font-size: 16px;
+    font-size: 0.6em;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 3vh;
     background-color: #9c6644;
     z-index: 4;
     display: flex;
@@ -47,19 +47,24 @@
 }
 
 #github {
-    margin-left: auto + 100px;
-    margin-right: auto; /* Push to the left */
+    // margin-right: auto; /* Push to the left */
+    left:0;
+    margin-left:5vw;
+    position:absolute;
 }
 
 #linkedin {
-    margin-left: auto ; /* Push to the right */
-    margin-right:auto;
+    // margin-left: auto ; /* Push to the right */
+    // margin-right:auto;
+    position:absolute;
+    right:0;
 }
 
 
 #bannerBody {
-    padding: 250px 100px 100px 50px;
-    margin: 0;
+    // padding: 250px 100px 100px 50px;
+    padding: 5vw;
+    margin-top: 10vh;
     background-color: #ddb892;
     z-index: 2;
     // align-items: center;
@@ -69,35 +74,36 @@
 }
 
 #bannerText {
-    font-size: 50px;
+    font-size: 1.5em;
     font-family: 'coffeecake';
     color: #9c6644;
-    margin-left:100px;
+    margin-left:5vw;
     text-align: right;
 }
 
 #contactButton {
-    padding: 10px 0px 10px 0px;
-    font-size: 30px;
+    // padding: 10px 0px 10px 0px;
+    padding: 1vw;
+    font-size: 1em;
     font-family: 'coffeecake';
     color: #9c6644;
     transition: background-color 0.3s ease;
     position: relative;
-    border-radius: 24px;
+    border-radius: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    margin-top:150px;
-    margin-left: 0px;
+    width: 15vw;
+    margin-top:10vh;
+    margin-left: 0;
     margin-right: auto;
 }
 
 #contactButton:hover {
-    border-radius: 24px;
+    border-radius: 2vw;
     border: 2px solid #9c6644;
     background-color: #9c6644; /* Match the theme color */
-    color: #fff;
+    color: #ddb892;
 }
 
 #view-resume-link {
@@ -108,21 +114,21 @@
 
 #resumeIcon {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 18vh;
     display: flex;
-    bottom: -26px; /* Adjust as needed */
-    right: 235px; /* Adjust as needed */
+    bottom: -1vh; /* Adjust as needed */
+    right: 11.5vw; /* Adjust as needed */
     z-index: 1;
 }
 
 #cakeBase {
-    font-size: 16px;
+    font-size: 1em;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 4vh;
     background-color: #9c6644;
     z-index: 4;
     display: flex;
@@ -136,13 +142,12 @@
 
 #resume-button {
     font-family: 'Patrick_Hand', cursive;
-    margin-left:100px;
+    margin-left:7vw;
     color: #ddb892; /* Match the theme color */
     text-decoration: none;
-    font-size: 18px;
-    padding: 0px 8px;
+    font-size: 0.6em;
     border: 3px solid #ddb892; /* Match the theme color */
-    border-radius: 8px;
+    border-radius: 0.8em;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     cursor: pointer;
     background-color: transparent;

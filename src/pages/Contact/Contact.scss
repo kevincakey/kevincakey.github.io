@@ -6,19 +6,19 @@
 
 .contactForm {
 	font-family: 'itim';
-	padding:100px;
-	margin-bottom: 40px;
-	margin-top: 150px; /* Adjust the top margin to push the form above the map */
+	padding:2vw;
+	margin-bottom: 4vh;
+	margin-top: 25vh; /* Adjust the top margin to push the form above the map */
 
 	form {
 		input, textarea {
-			margin:10px;
-			width: 100%;
-			padding:10px;
+			margin:0.4vw;
+			width: 40vw;
+			padding:0.6vw;
 			border: 2px solid #ddb892;
-			border-radius: 8px;
+			border-radius: 1vw;
 			font-family: 'itim';
-			font-size: 1rem;
+			font-size: 0.6em;
 			color: #ddb892;
 			background-color: transparent;
 			resize: none;
@@ -32,17 +32,17 @@
 
 		input[name='name'],
 		input[name='email']{
-			width:50%;
+			width:40vw;
 		}
 	}
 
 		input[type='submit'] {
-			width: 20%;
-			padding: 10px;
+			width: 6vw;
+			padding: 0.5vw;
 			border: 2px solid #ddb892;
-			border-radius: 8px;
+			border-radius: 1vw;
 			font-family: 'itim';
-			font-size: 1rem;
+			font-size: 0.6em;
 			color: #ddb892;
 			background-color: transparent;
 			cursor: pointer;
@@ -64,10 +64,10 @@
   
 	#map {
 		position: absolute;
-		bottom: 30px; /* Adjusted position */
+		bottom: 2vw; /* Adjusted position */
 		left: 0px; /* Adjust the left offset as needed */
 		right: 0px;
-		height: 200px;
-		border-radius: 20px;
+		height: 10vw;
+		border-radius: 2vw;
 		z-index: 1;
 	}

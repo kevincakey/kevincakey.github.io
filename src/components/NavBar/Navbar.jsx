@@ -32,7 +32,7 @@ const Navbar = () => {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
+        transition={{ duration: 5 }}
       >
         <motion.ul id="navbar-icons">
           <motion.li
