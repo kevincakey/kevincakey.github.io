@@ -17,7 +17,7 @@ const Home = () => {
       transition: {
         type: "spring",
         velocity: 1000,
-        duration: 2,
+        duration: 0.5,
         bounce: 0.1,
       },
     },
