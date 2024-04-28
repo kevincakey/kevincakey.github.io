@@ -3,41 +3,43 @@ import "./Home.scss";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import cakeAnimation from "../../assets/icons/cakeAnimation.lottie";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import splatSound from "../../assets/sounds/splat.mp3";
 
 const Home = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      const audio = new Audio(splatSound);
-      audio.play().catch((error) => {
-        // Log or handle the error
-        console.error("Failed to play sound:", error);
-      });
-    }, 800); // Delay sound playback by 1.5 seconds
-  }, []);
-
-  return (
-    <motion.div
-      id="cover"
-      animate={{ x: 0 }}
-      exit={{ x: "-100vw" }}
-      transition={{
+  const containerVariants = {
+    hidden: {
+      filter: "blur(100px)",
+    },
+    visible: {
+      x: 0,
+      filter: "blur(0px)",
+      transition: {
         type: "spring",
-        duration: 1,
-        stiffness: 100,
-      }}
-    >
+        velocity: 1000,
+        duration: 2,
+        bounce: 0.1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      filter: "blur(100px)",
+      transition: {
+        type: "spring",
+        velocity: 1000,
+        duration: 0.2,
+        bounce: 0.1,
+      },
+    },
+  };
+  return (
+    <div id="cover">
       <div id="HomeContainer">
         <motion.div
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0 }}
-          transition={{
-            type: "spring",
-            delay: 1,
-            duration: 2,
-            stiffness: 100,
-          }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
           className="lottie-container"
         >
           <DotLottiePlayer
@@ -48,7 +50,7 @@ const Home = () => {
           ></DotLottiePlayer>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

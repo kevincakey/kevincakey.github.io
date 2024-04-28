@@ -12,12 +12,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <motion.div
-      id="banner"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 5 }}
-    >
+    <div id="banner">
       <div id="topCake">
         <div className="social-icons" id="linkedin">
           <a
@@ -89,7 +84,7 @@ const Banner = () => {
           </button>
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

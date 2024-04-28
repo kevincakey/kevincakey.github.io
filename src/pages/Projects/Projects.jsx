@@ -1,6 +1,7 @@
 import React from "react";
 import "./Projects.scss";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import Banner from "../../components/Banner/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -27,27 +28,51 @@ const Projects = () => {
     { icon: faReact, color: "#5ED4F4" },
   ];
 
+  const containerVariants = {
+    hidden: {
+      x: "100vw",
+      filter: "blur(100px)",
+    },
+    visible: {
+      x: 0,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring",
+        velocity: 1000,
+        duration: 2,
+        bounce: 0.1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      filter: "blur(100px)",
+      transition: {
+        type: "spring",
+        velocity: 1000,
+        duration: 0.2,
+        bounce: 0.1,
+      },
+    },
+  };
+
   return (
     <>
+      <Banner></Banner>
       <motion.h1
         className="title"
-        initial={{ x: "100vw" }}
-        animate={{ x: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 60,
-        }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         Projects
       </motion.h1>
       <motion.div
         id="projects-container"
-        initial={{ x: "100vw" }}
-        animate={{ x: 0 }}
-        transition={{
-          type: "spring",
-          stiffness: 60,
-        }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         <ProjectCard
           icons={iconData}
