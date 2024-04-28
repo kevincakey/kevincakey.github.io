@@ -31,22 +31,22 @@ const Projects = () => {
     <>
       <motion.h1
         className="title"
-        initial={{ y: "-100vh" }}
-        animate={{ y: 0 }}
+        initial={{ x: "100vw" }}
+        animate={{ x: 0 }}
         transition={{
           type: "spring",
-          stiffness: 100,
+          stiffness: 60,
         }}
       >
         Projects
       </motion.h1>
       <motion.div
         id="projects-container"
-        initial={{ y: "-100vh" }}
-        animate={{ y: 0 }}
+        initial={{ x: "100vw" }}
+        animate={{ x: 0 }}
         transition={{
           type: "spring",
-          stiffness: 100,
+          stiffness: 60,
         }}
       >
         <ProjectCard

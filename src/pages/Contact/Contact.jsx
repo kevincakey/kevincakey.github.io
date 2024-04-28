@@ -28,11 +28,11 @@ const Contact = () => {
   return (
     <motion.div
       id="contact-container"
-      initial={{ y: "-100vh" }}
-      animate={{ y: 0 }}
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
       transition={{
         type: "spring",
-        stiffness: 100,
+        stiffness: 60,
       }}
     >
       <h1 className="title">Contact</h1>

@@ -18,31 +18,37 @@ const Home = () => {
   }, []);
 
   return (
-    <AnimatePresence>
-      <div id="cover">
-        <div id="HomeContainer">
-          <motion.div
-            initial={{ y: "-100vh" }}
-            animate={{ y: 0 }}
-            exit={{ x: "-100vw" }}
-            transition={{
-              type: "spring",
-              delay: 1,
-              duration: 2,
-              stiffness: 100,
-            }}
-            className="lottie-container"
-          >
-            <DotLottiePlayer
-              src={cakeAnimation}
-              autoplay
-              speed="2"
-              background="transparent"
-            ></DotLottiePlayer>
-          </motion.div>
-        </div>
+    <motion.div
+      id="cover"
+      animate={{ x: 0 }}
+      exit={{ x: "-100vw" }}
+      transition={{
+        type: "spring",
+        duration: 1,
+        stiffness: 100,
+      }}
+    >
+      <div id="HomeContainer">
+        <motion.div
+          initial={{ y: "-100vh" }}
+          animate={{ y: 0 }}
+          transition={{
+            type: "spring",
+            delay: 1,
+            duration: 2,
+            stiffness: 100,
+          }}
+          className="lottie-container"
+        >
+          <DotLottiePlayer
+            src={cakeAnimation}
+            autoplay
+            speed="2"
+            background="transparent"
+          ></DotLottiePlayer>
+        </motion.div>
       </div>
-    </AnimatePresence>
+    </motion.div>
   );
 };
 
