@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import Map from "../../components/Map/Map.jsx";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const sendEmail = (e) => {
@@ -25,7 +26,17 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact-container">
+    <motion.div
+      id="contact-container"
+      initial={{ y: "-100vh" }}
+      animate={{ y: 0 }}
+      transition={{
+        type: "spring",
+        delay: 1,
+        duration: 2,
+        stiffness: 100,
+      }}
+    >
       <h1 className="title">Contact</h1>
       <div className="contactForm">
         <form onSubmit={sendEmail}>
@@ -49,7 +60,7 @@ const Contact = () => {
         </form>
       </div>
       <Map id="map" />
-    </div>
+    </motion.div>
   );
 };
 

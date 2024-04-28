@@ -17,10 +17,21 @@ import { ReactComponent as NodejsIcon } from "../../assets/icons/nodejsIcon.svg"
 import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg";
 import { ReactComponent as SQLIcon } from "../../assets/icons/sqlIcon.svg";
 import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.svg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div id="about-container">
+    <motion.div
+      id="about-container"
+      initial={{ y: "-100vh" }}
+      animate={{ y: 0 }}
+      transition={{
+        type: "spring",
+        delay: 1,
+        duration: 2,
+        stiffness: 100,
+      }}
+    >
       <h1 className="title">About</h1>
       <div id="about-body">
         <h2>
@@ -33,19 +44,39 @@ const About = () => {
         </h3>
         <ul className="icon-grid">
           <li>
-            <FontAwesomeIcon className="svgIcons" icon={faHtml5} color="#F06529" />
+            <FontAwesomeIcon
+              className="svgIcons"
+              icon={faHtml5}
+              color="#F06529"
+            />
           </li>
           <li>
-            <FontAwesomeIcon className="svgIcons" icon={faCss3} color="#28A4D9" />
+            <FontAwesomeIcon
+              className="svgIcons"
+              icon={faCss3}
+              color="#28A4D9"
+            />
           </li>
           <li>
-            <FontAwesomeIcon className="svgIcons" icon={faReact} color="#5ED4F4" />
+            <FontAwesomeIcon
+              className="svgIcons"
+              icon={faReact}
+              color="#5ED4F4"
+            />
           </li>
           <li>
-            <FontAwesomeIcon className="svgIcons" icon={faJsSquare} color="#EFD81D" />
+            <FontAwesomeIcon
+              className="svgIcons"
+              icon={faJsSquare}
+              color="#EFD81D"
+            />
           </li>
           <li>
-            <FontAwesomeIcon className="svgIcons" icon={faGitAlt} color="#EC4D28" />
+            <FontAwesomeIcon
+              className="svgIcons"
+              icon={faGitAlt}
+              color="#EC4D28"
+            />
           </li>
           <li>
             <FontAwesomeIcon className="svgIcons" icon={faSass} />
@@ -74,12 +105,10 @@ const About = () => {
           <li>
             <SQLIcon className="svgIcons" />
           </li>
-          <li>
-            C++
-          </li>
+          <li>C++</li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

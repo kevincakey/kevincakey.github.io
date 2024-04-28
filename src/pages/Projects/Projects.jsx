@@ -16,6 +16,7 @@ import { ReactComponent as ForkIcon } from "../../assets/icons/fork.svg";
 import { ReactComponent as LikeIcon } from "../../assets/icons/likeIcon.svg";
 import { ReactComponent as PearIcon } from "../../assets/icons/pearIcon.svg";
 import { ReactComponent as PuzzleIcon } from "../../assets/icons/puzzleIcon.svg";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const iconData = [
@@ -27,7 +28,17 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects-container">
+    <motion.div
+      id="projects-container"
+      initial={{ y: "-100vh" }}
+      animate={{ y: 0 }}
+      transition={{
+        type: "spring",
+        delay: 1,
+        duration: 2,
+        stiffness: 100,
+      }}
+    >
       <h1 className="title">Projects</h1>
       <ProjectCard
         icons={iconData}
@@ -57,7 +68,7 @@ const Projects = () => {
         emblem={<PuzzleIcon />}
         website="https://github.com/kevincakey/EightPuzzleSearch"
       ></ProjectCard>
-    </div>
+    </motion.div>
   );
 };
 

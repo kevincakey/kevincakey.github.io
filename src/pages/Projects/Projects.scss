@@ -1,13 +1,8 @@
-.title{
-	position:fixed;
-	color: #ddb892;
-}
-
 #projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr)); /* Arrange cards in a flexible grid */
 	grid-gap: 2vw; /* Add gap between cards */
-	position: relative; /* Ensure positioning context */
+	// position: relative; /* Ensure positioning context */
 	max-width: 40vw; /* Set maximum width of the grid */
 	// margin: 0 auto; /* Center the grid horizontally */
 	margin:10vh;
