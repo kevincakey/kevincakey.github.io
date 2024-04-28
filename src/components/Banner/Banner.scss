@@ -107,9 +107,13 @@
 }
 
 #view-resume-link {
+    width: 10vw;
+    height: 28vh;
     position: absolute;
-    bottom: 0px; /* Adjust as needed */
-    right: 0px;
+    bottom: 3vh;
+    right:14.5vw;
+    z-index:2; /* Adjust as needed */
+    // right: 0;
 }
 
 #resumeIcon {
@@ -117,7 +121,7 @@
     width: 40vw;
     height: 50vh;
     display: flex;
-    bottom: -10vh; /* Adjust as needed */
+    bottom: -2vh; /* Adjust as needed */
     right: -1vw; /* Adjust as needed */
     z-index: 1;
 }

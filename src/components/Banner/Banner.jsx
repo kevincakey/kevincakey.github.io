@@ -61,21 +61,19 @@ const Banner = () => {
         </Link>
         <div id="viewResume">
           <a
-            className="links"
             id="view-resume-link"
             href={resume}
             target="_blank"
             rel="noreferrer"
           >
-            <DotLottiePlayer
-              id="resumeIcon"
-              src={resumeIcon}
-              autoplay
-              loop
-              hover
-              background="transparent"
-            />
+            <div></div>
           </a>
+          <DotLottiePlayer
+            id="resumeIcon"
+            src={resumeIcon}
+            autoplay
+            background="transparent"
+          />
         </div>
       </div>
       <div id="cakeBase">
