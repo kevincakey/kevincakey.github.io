@@ -3,7 +3,7 @@ import "./Home.scss";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import cakeAnimation from "../../assets/icons/cakeAnimation.lottie";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import splatSound from "../../assets/sounds/splat.mp3";
 
 const Home = () => {
@@ -18,28 +18,31 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="cover">
-      <div id="HomeContainer">
-        <motion.div
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0 }}
-          transition={{
-            type: "spring",
-            delay: 1,
-            duration: 2,
-            stiffness: 100,
-          }}
-          className="lottie-container"
-        >
-          <DotLottiePlayer
-            src={cakeAnimation}
-            autoplay
-            speed="2"
-            background="transparent"
-          ></DotLottiePlayer>
-        </motion.div>
+    <AnimatePresence>
+      <div id="cover">
+        <div id="HomeContainer">
+          <motion.div
+            initial={{ y: "-100vh" }}
+            animate={{ y: 0 }}
+            exit={{ x: "-100vw" }}
+            transition={{
+              type: "spring",
+              delay: 1,
+              duration: 2,
+              stiffness: 100,
+            }}
+            className="lottie-container"
+          >
+            <DotLottiePlayer
+              src={cakeAnimation}
+              autoplay
+              speed="2"
+              background="transparent"
+            ></DotLottiePlayer>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </AnimatePresence>
   );
 };
 

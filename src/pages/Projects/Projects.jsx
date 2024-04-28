@@ -28,47 +28,57 @@ const Projects = () => {
   ];
 
   return (
-    <motion.div
-      id="projects-container"
-      initial={{ y: "-100vh" }}
-      animate={{ y: 0 }}
-      transition={{
-        type: "spring",
-        delay: 1,
-        duration: 2,
-        stiffness: 100,
-      }}
-    >
-      <h1 className="title">Projects</h1>
-      <ProjectCard
-        icons={iconData}
-        emblem={<ChatIcon></ChatIcon>}
-        website={"https://github.com/kevincakey/MessagingApp"}
-        name="Messaging App"
+    <>
+      <motion.h1
+        className="title"
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+        }}
       >
-        {/* MERN MongoDB, Express, React, Node Messaging App */}
-      </ProjectCard>
-      <ProjectCard
-        name="Fork"
-        emblem={<ForkIcon />}
-        website="https://github.com/kevincakey/CS180-Fork"
-      ></ProjectCard>
-      <ProjectCard
-        name="Zoomies"
-        emblem={<PearIcon />}
-        website="https://github.com/kevincakey/Zoomies"
-      ></ProjectCard>
-      <ProjectCard
-        name="Collaborative Recommender System"
-        emblem={<LikeIcon />}
-        website="https://github.com/kevincakey/CollaborativeRecommenderSystem"
-      ></ProjectCard>
-      <ProjectCard
-        name="8-puzzle search"
-        emblem={<PuzzleIcon />}
-        website="https://github.com/kevincakey/EightPuzzleSearch"
-      ></ProjectCard>
-    </motion.div>
+        Projects
+      </motion.h1>
+      <motion.div
+        id="projects-container"
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+        }}
+      >
+        <ProjectCard
+          icons={iconData}
+          emblem={<ChatIcon></ChatIcon>}
+          website={"https://github.com/kevincakey/MessagingApp"}
+          name="Messaging App"
+        >
+          {/* MERN MongoDB, Express, React, Node Messaging App */}
+        </ProjectCard>
+        <ProjectCard
+          name="Fork"
+          emblem={<ForkIcon />}
+          website="https://github.com/kevincakey/CS180-Fork"
+        ></ProjectCard>
+        <ProjectCard
+          name="Zoomies"
+          emblem={<PearIcon />}
+          website="https://github.com/kevincakey/Zoomies"
+        ></ProjectCard>
+        <ProjectCard
+          name="Collaborative Recommender System"
+          emblem={<LikeIcon />}
+          website="https://github.com/kevincakey/CollaborativeRecommenderSystem"
+        ></ProjectCard>
+        <ProjectCard
+          name="8-puzzle search"
+          emblem={<PuzzleIcon />}
+          website="https://github.com/kevincakey/EightPuzzleSearch"
+        ></ProjectCard>
+      </motion.div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
 import { Link, useLocation } from "react-router-dom";
 import homeIcon from "../../assets/icons/homeIcon.lottie";
@@ -7,7 +7,7 @@ import projectsIcon from "../../assets/icons/projectsIcon.lottie";
 import contactIcon from "../../assets/icons/contactIcon.lottie";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const location = useLocation();
@@ -26,9 +26,34 @@ const Navbar = () => {
     navbarClass += " contact-route";
   }
 
+  const [showMsg, setShowMsg] = useState(false);
+
+  useEffect(() => {
+    setShowMsg(true);
+    setTimeout(() => {
+      setShowMsg(false);
+    }, 4000);
+  }, []);
+
   return (
     <div className={navbarClass}>
       <div id="topCake"></div>
+      <AnimatePresence>
+        {showMsg && (
+          <motion.div
+            id="clickMsg"
+            initial={{ x: "100vw" }}
+            animate={{ x: 0, y: 20 }}
+            transition={{ type: "spring", stiffness: 20 }}
+            exit={{
+              opacity: 0,
+              transition: { duration: 2, type: "tween" },
+            }}
+          >
+            Click Me!
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -38,7 +63,7 @@ const Navbar = () => {
           <motion.li
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ type: "spring", delay: 0.2, stiffness: 20 }}
+            transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
           >
             <Link to="/">
               <DotLottiePlayer
@@ -52,7 +77,7 @@ const Navbar = () => {
           <motion.li
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
+            transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
           >
             <Link to="/About">
               <DotLottiePlayer
@@ -66,7 +91,7 @@ const Navbar = () => {
           <motion.li
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
+            transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
           >
             <Link to="/Projects">
               <div className="icon-background">
@@ -82,7 +107,7 @@ const Navbar = () => {
           <motion.li
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
+            transition={{ type: "spring", delay: 1, stiffness: 20 }}
           >
             <Link to="/Contact">
               <div className="icon-background">
