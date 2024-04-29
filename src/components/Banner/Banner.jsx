@@ -8,83 +8,116 @@ import resumeIcon from "../../assets/icons/resumeIcon.lottie";
 import downloadIcon from "../../assets/icons/downloadIcon.lottie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Banner = () => {
+  const containerVariants = {
+    hidden: {
+      x: "50vw",
+      filter: "blur(100px)",
+    },
+    visible: {
+      x: 0,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring",
+        duration: 2,
+        bounce: 0.1,
+      },
+    },
+    exit: {
+      // x: "50vw",
+      filter: "blur(100px)",
+      transition: {
+        type: "spring",
+        duration: 5,
+        bounce: 0.1,
+      },
+    },
+  };
   return (
-    <div id="banner">
-      <div id="topCake">
-        <div className="social-icons" id="linkedin">
-          <a
-            className="links"
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/kevincakey/"
-          >
-            <FontAwesomeIcon
-              id="linkedin-icon"
-              icon={faLinkedin}
-              size="lg"
-              style={{ color: "#ddb892" }}
-            />
-            https://www.linkedin.com/in/kevincakey
-          </a>
+    <AnimatePresence mode="wait">
+      <motion.div
+        id="banner"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <div id="backdrop"></div>
+        <div id="topCake">
+          <div className="social-icons" id="linkedin">
+            <a
+              className="links"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/kevincakey/"
+            >
+              <FontAwesomeIcon
+                id="linkedin-icon"
+                icon={faLinkedin}
+                size="lg"
+                style={{ color: "#ddb892" }}
+              />
+              https://www.linkedin.com/in/kevincakey
+            </a>
+          </div>
+          <div className="social-icons" id="github">
+            <a
+              className="links"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/kevincakey"
+            >
+              <FontAwesomeIcon
+                id="github-icon"
+                icon={faGithub}
+                size="lg"
+                style={{ color: "#ddb892" }}
+              />
+              https://github.com/kevincakey
+            </a>
+          </div>
         </div>
-        <div className="social-icons" id="github">
-          <a
-            className="links"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/kevincakey"
-          >
-            <FontAwesomeIcon
-              id="github-icon"
-              icon={faGithub}
-              size="lg"
-              style={{ color: "#ddb892" }}
+        <div id="bannerBody">
+          <p id="bannerText">
+            Hi! I am Kevin Gao <br /> Aspiring Developer <br /> MS student
+          </p>
+          <Link to="/Contact" id="contactButton" className="links">
+            Add me to your team !
+          </Link>
+          <div id="viewResume">
+            <a
+              id="view-resume-link"
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div></div>
+            </a>
+            <DotLottiePlayer
+              id="resumeIcon"
+              src={resumeIcon}
+              autoplay
+              background="transparent"
             />
-            https://github.com/kevincakey
-          </a>
+          </div>
         </div>
-      </div>
-      <div id="bannerBody">
-        <p id="bannerText">
-          Hi! I am Kevin Gao <br /> Aspiring Developer <br /> MS student
-        </p>
-        <Link to="/Contact" id="contactButton" className="links">
-          Add me to your team !
-        </Link>
-        <div id="viewResume">
+        <div id="cakeBase">
           <a
-            id="view-resume-link"
+            id="resume-link"
             href={resume}
             target="_blank"
             rel="noreferrer"
+            download="Kevin_Gao's_Resume"
           >
-            <div></div>
+            <button id="resume-button" className="links">
+              Download Resume
+            </button>
           </a>
-          <DotLottiePlayer
-            id="resumeIcon"
-            src={resumeIcon}
-            autoplay
-            background="transparent"
-          />
         </div>
-      </div>
-      <div id="cakeBase">
-        <a
-          id="resume-link"
-          href={resume}
-          target="_blank"
-          rel="noreferrer"
-          download="Kevin_Gao's_Resume"
-        >
-          <button id="resume-button" className="links">
-            Download Resume
-          </button>
-        </a>
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

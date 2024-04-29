@@ -71,3 +71,12 @@
   font-family: 'coffeecake';
   color: #ddb892;
 }
+
+#cover{
+	position:fixed;
+	margin-right:-100vw;
+	z-index:0;
+	height:100vh;
+	width: 50vw;
+	background-color: #ddb892;
+  }

@@ -60,6 +60,13 @@
     right:0;
 }
 
+#backdrop {
+    background-color: #ddb892;
+    position:absolute;
+    z-index: -1;
+    width: 45vw;
+    height: 100vh;
+}
 
 #bannerBody {
     // padding: 250px 100px 100px 50px;
@@ -121,7 +128,7 @@
     width: 40vw;
     height: 50vh;
     display: flex;
-    bottom: -2vh; /* Adjust as needed */
+    bottom: -4.2vh; /* Adjust as needed */
     right: -1vw; /* Adjust as needed */
     z-index: 1;
 }

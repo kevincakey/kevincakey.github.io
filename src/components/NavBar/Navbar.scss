@@ -5,7 +5,7 @@
     width: 100%;
     height: 5vh;
     background-color: #9C6644;
-	z-index:6;
+	z-index:8;
 }
 
 .navbar-container{
@@ -16,7 +16,7 @@
   	padding: 0;
 	position:fixed;
 	right:0px;
-	z-index: 6;
+	z-index: 8;
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -73,5 +73,5 @@
     width: 100%;
     height: 5vh;
     background-color: #9C6644;
-    z-index:6;
+    z-index:8;
 }

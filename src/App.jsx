@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/NavBar/Navbar";
 import Banner from "./components/Banner/Banner";
 import Home from "./pages/Home/Home";
@@ -11,12 +11,19 @@ import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
     <div className="App">
       <div className="App-header">
-        <Navbar></Navbar>
-        <AnimatePresence mode="wait" initial="false">
+        <Navbar />
+        <div id="cover"></div>
+        {!isHome && (
+          <AnimatePresence mode="wait">
+            <Banner />
+          </AnimatePresence>
+        )}
+        <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />

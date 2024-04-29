@@ -55,7 +55,7 @@ const Contact = () => {
 
   return (
     <>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
       <motion.div
         id="contact-container"
         variants={containerVariants}

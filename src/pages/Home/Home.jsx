@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Home.scss";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import cakeAnimation from "../../assets/icons/cakeAnimation.lottie";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import splatSound from "../../assets/sounds/splat.mp3";
+import Banner from "../../components/Banner/Banner";
 
 const Home = () => {
   const containerVariants = {
@@ -17,6 +18,7 @@ const Home = () => {
       transition: {
         type: "spring",
         velocity: 1000,
+        delay: 2,
         duration: 0.5,
         bounce: 0.1,
       },
@@ -32,8 +34,48 @@ const Home = () => {
       },
     },
   };
+
+  // const bannerVariants = {
+  //   hidden: {
+  //     opacity: 1,
+  //     y: "-100%",
+  //     transition: {
+  //       type: "spring",
+  //       stiffness: 100,
+  //       duration: 5,
+  //     },
+  //   },
+  //   visible: {
+  //     opacity: 0,
+  //     y: 0,
+  //     transition: {
+  //       type: "spring",
+  //       stiffness: 100,
+  //       duration: 5,
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 1,
+  //     y: "-100%",
+  //     transition: {
+  //       duration: 6,
+  //     },
+  //   },
+  // };
+
   return (
-    <div id="cover">
+    <>
+      {/* <AnimatePresence>
+        <motion.div
+          id="banner-wrapper"
+          variants={bannerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <Banner id="banner"></Banner>
+        </motion.div>
+      </AnimatePresence> */}
       <div id="HomeContainer">
         <motion.div
           variants={containerVariants}
@@ -50,7 +92,7 @@ const Home = () => {
           ></DotLottiePlayer>
         </motion.div>
       </div>
-    </div>
+    </>
   );
 };
 

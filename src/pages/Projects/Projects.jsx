@@ -57,7 +57,7 @@ const Projects = () => {
 
   return (
     <>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
       <motion.h1
         className="title"
         variants={containerVariants}
