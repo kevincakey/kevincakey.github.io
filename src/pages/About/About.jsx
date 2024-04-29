@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import "./About.scss";
-import Banner from "../../components/Banner/Banner";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-  faSass,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { ReactComponent as CssIcon } from "../../assets/icons/cssIcon.svg";
+import { ReactComponent as HtmlIcon } from "../../assets/icons/htmlIcon.svg";
+import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
+import { ReactComponent as GitIcon } from "../../assets/icons/gitIcon.svg";
+import { ReactComponent as SassIcon } from "../../assets/icons/sassIcon.svg";
+import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascriptIcon.svg";
+import { ReactComponent as ReactIcon } from "../../assets/icons/reactIcon.svg";
 import { ReactComponent as PythonIcon } from "../../assets/icons/pythonIcon.svg";
 import { ReactComponent as ExpressIcon } from "../../assets/icons/expressIcon.svg";
 import { ReactComponent as JavaIcon } from "../../assets/icons/javaIcon.svg";
@@ -112,10 +108,8 @@ const About = () => {
               onMouseEnter={() => handleMouseEnter("react")}
               onMouseLeave={handleMouseLeave}
             >
-              <FontAwesomeIcon
+              <ReactIcon
                 className={`svgIcons ${hoveredIcon === "react" ? "blur" : ""}`}
-                icon={faReact}
-                color="#5ED4F4"
               />
               {hoveredIcon === "react" && <span>React</span>}
             </li>
@@ -123,12 +117,10 @@ const About = () => {
               onMouseEnter={() => handleMouseEnter("javascript")}
               onMouseLeave={handleMouseLeave}
             >
-              <FontAwesomeIcon
+              <JavascriptIcon
                 className={`svgIcons ${
                   hoveredIcon === "javascript" ? "blur" : ""
                 }`}
-                icon={faJsSquare}
-                color="#EFD81D"
               />
               {hoveredIcon === "javascript" && <span>Javascript</span>}
             </li>
@@ -140,17 +132,6 @@ const About = () => {
                 className={`svgIcons ${hoveredIcon === "sql" ? "blur" : ""}`}
               />
               {hoveredIcon === "sql" && <span>SQL</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("github")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <FontAwesomeIcon
-                className={`svgIcons ${hoveredIcon === "github" ? "blur" : ""}`}
-                icon={faGithub}
-                color="black"
-              />
-              {hoveredIcon === "github" && <span>Github</span>}
             </li>
             <li
               onMouseEnter={() => handleMouseEnter("mongodb")}
@@ -173,48 +154,60 @@ const About = () => {
               {hoveredIcon === "nodejs" && <span>Node.js</span>}
             </li>
             <li
-              onMouseEnter={() => handleMouseEnter("html")}
+              onMouseEnter={() => handleMouseEnter("express")}
               onMouseLeave={handleMouseLeave}
             >
-              <FontAwesomeIcon
-                className={`svgIcons ${hoveredIcon === "html" ? "blur" : ""}`}
-                icon={faHtml5}
-                color="#F06529"
+              <ExpressIcon
+                className={`svgIcons ${
+                  hoveredIcon === "express" ? "blur" : ""
+                }`}
               />
-              {hoveredIcon === "html" && <span>HTML5</span>}
+              {hoveredIcon === "express" && <span>Express</span>}
             </li>
             <li
-              onMouseEnter={() => handleMouseEnter("css")}
+              onMouseEnter={() => handleMouseEnter("github")}
               onMouseLeave={handleMouseLeave}
             >
-              <FontAwesomeIcon
-                className={`svgIcons ${hoveredIcon === "css" ? "blur" : ""}`}
-                icon={faCss3}
-                color="#28A4D9"
+              <GithubIcon
+                className={`svgIcons ${hoveredIcon === "github" ? "blur" : ""}`}
               />
-              {hoveredIcon === "css" && <span>CSS3</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("sass")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <FontAwesomeIcon
-                className={`svgIcons ${hoveredIcon === "sass" ? "blur" : ""}`}
-                icon={faSass}
-                color="#c69"
-              />
-              {hoveredIcon === "sass" && <span>Sass</span>}
+              {hoveredIcon === "github" && <span>Github</span>}
             </li>
             <li
               onMouseEnter={() => handleMouseEnter("git")}
               onMouseLeave={handleMouseLeave}
             >
-              <FontAwesomeIcon
+              <GitIcon
                 className={`svgIcons ${hoveredIcon === "git" ? "blur" : ""}`}
-                icon={faGitAlt}
-                color="#EC4D28"
               />
               {hoveredIcon === "git" && <span>Git</span>}
+            </li>
+            <li
+              onMouseEnter={() => handleMouseEnter("sass")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <SassIcon
+                className={`svgIcons ${hoveredIcon === "sass" ? "blur" : ""}`}
+              />
+              {hoveredIcon === "sass" && <span>Sass</span>}
+            </li>
+            <li
+              onMouseEnter={() => handleMouseEnter("html")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <HtmlIcon
+                className={`svgIcons ${hoveredIcon === "html" ? "blur" : ""}`}
+              />
+              {hoveredIcon === "html" && <span>HTML</span>}
+            </li>
+            <li
+              onMouseEnter={() => handleMouseEnter("css")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <CssIcon
+                className={`svgIcons ${hoveredIcon === "css" ? "blur" : ""}`}
+              />
+              {hoveredIcon === "css" && <span>CSS</span>}
             </li>
             <li
               onMouseEnter={() => handleMouseEnter("pandas")}
@@ -233,17 +226,6 @@ const About = () => {
                 className={`svgIcons ${hoveredIcon === "numpy" ? "blur" : ""}`}
               />
               {hoveredIcon === "numpy" && <span>NumPy</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("express")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <ExpressIcon
-                className={`svgIcons ${
-                  hoveredIcon === "express" ? "blur" : ""
-                }`}
-              />
-              {hoveredIcon === "express" && <span>Express</span>}
             </li>
             <li
               onMouseEnter={() => handleMouseEnter("java")}

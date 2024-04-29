@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ProjectCard.scss";
 
 const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
@@ -35,13 +34,13 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
           <h3>{name}</h3>
           <div className="icon-wrapper">
             {icons &&
-              icons.map(({ icon, color, type }, index) => (
+              icons.map(({ icon }, index) => (
                 <React.Fragment key={index}>
-                  {type === "fontawesome" ? (
-                    <FontAwesomeIcon icon={icon} style={{ color: color }} />
-                  ) : type === "svg" ? (
-                    icon // Render SVG icon component
-                  ) : null}
+                  {
+                    <React.Fragment>
+                      {icon} {/* Render SVG icon component */}
+                    </React.Fragment>
+                  }
                 </React.Fragment>
               ))}
             {children}

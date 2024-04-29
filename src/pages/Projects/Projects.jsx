@@ -32,13 +32,7 @@ const Projects = () => {
       name: "Messaging App",
       emblem: <ChatIcon />,
       website: "https://github.com/kevincakey/MessagingApp",
-      iconData: [
-        { icon: faReact, color: "#5ED4F4", type: "fontawesome" },
-        { icon: faJsSquare, color: "#EFD81D", type: "fontawesome" },
-        { icon: faHtml5, color: "#F06529", type: "fontawesome" },
-        { icon: faCss3, color: "#28A4D9", type: "fontawesome" },
-        { icon: faGitAlt, color: "#EC4D28", type: "fontawesome" },
-      ],
+      iconData: [],
     },
     {
       name: "Fork",
@@ -46,6 +40,7 @@ const Projects = () => {
       website: "https://github.com/kevincakey/CS180-Fork",
       iconData: [
         /* Add custom icon data for this project */
+        { icon: <PythonIcon /> },
       ],
     },
     {
