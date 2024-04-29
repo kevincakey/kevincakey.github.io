@@ -55,7 +55,7 @@ const Banner = () => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/kevincakey/"
             >
-              <LinkedinIcon />
+              <LinkedinIcon id="linkedin-icon" />
               https://www.linkedin.com/in/kevincakey
             </a>
           </div>
@@ -66,7 +66,7 @@ const Banner = () => {
               rel="noreferrer"
               href="https://github.com/kevincakey"
             >
-              <GithubIcon />
+              <GithubIcon id="github-icon" />
               https://github.com/kevincakey
             </a>
           </div>
