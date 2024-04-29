@@ -20,6 +20,7 @@ import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg"
 import { ReactComponent as SQLIcon } from "../../assets/icons/sqlIcon.svg";
 import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.svg";
 import { ReactComponent as CIcon } from "../../assets/icons/c++.svg";
+import { ReactComponent as NumPyIcon } from "../../assets/icons/numpyIcon.svg";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -223,6 +224,15 @@ const About = () => {
                 className={`svgIcons ${hoveredIcon === "pandas" ? "blur" : ""}`}
               />
               {hoveredIcon === "pandas" && <span>Pandas</span>}
+            </li>
+            <li
+              onMouseEnter={() => handleMouseEnter("numpy")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <NumPyIcon
+                className={`svgIcons ${hoveredIcon === "numpy" ? "blur" : ""}`}
+              />
+              {hoveredIcon === "numpy" && <span>NumPy</span>}
             </li>
             <li
               onMouseEnter={() => handleMouseEnter("express")}

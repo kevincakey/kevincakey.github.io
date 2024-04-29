@@ -1,46 +1,48 @@
 .card {
-	position: relative; /* Positioning context for absolute positioning */
-	padding: 2vw;
-	top:0;
-	border: 2px solid #ddb892; /* Border color */
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-	transition: box-shadow 0.3s;
-	height: 12vh; /* Set card height */
-	width: 12vh; /* Set card width */
-	overflow: hidden; /* Hide overflow content */
-	display: flex; /* Use flexbox for alignment */
-	flex-direction: column; /* Arrange content vertically */
-	transition: opacity 0.3s;
-}
-
-.card-container:hover .card {
-	opacity: 1; /* Show on hover */
-}
-
-h3 {
-	margin-top:2vh;
-	font-size: 0.8em;
-	color: #9c6644; /* Heading color */
-}
-
-/* Style links within the card */
-a {
 	position: relative;
-	color: #9c6644; /* Link color */
+	padding: 2vw;
+	top: 0;
+	border: 2px solid #ddb892;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s, opacity 0.3s; /* Combine transitions */
+	height: 12vh;
+	width: 12vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  h3 {
+	margin-top: 2vh;
+	font-size: 0.6em;
+	color: #9c6644;
+  }
+  
+  a {
+	position: relative;
+	color: #9c6644;
 	text-decoration: none;
 	transition: color 0.3s;
-}
-
-a:hover {
-	color: #5e391f; /* Change color on hover */
-}
-
-.emblem-wrapper {
-	position: absolute; /* Position the emblem relatively within the card */
-	top: 0.5vh; /* Adjust top position */
-	right: 0.2vw; /* Adjust right position */
+  }
+  
+  a:hover {
+	color: #5e391f;
+  }
+  
+  .emblem-wrapper {
+	position: absolute;
+	top: 0.5vh;
+	right: 0.2vw;
 	width: 2.5vw;
 	height: 2.5vw;
-	z-index: 5;
+	z-index: 5; /* Set z-index for emblem */
   }
+  
+  .icon-wrapper {
+	position: absolute;
+	margin-top:10vh;
+	left:1.5vw; /* Ensure position context */
+	z-index: 10; /* Set higher z-index for icon wrapper */
+  }
+  
