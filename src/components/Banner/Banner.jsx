@@ -14,7 +14,7 @@ const Banner = () => {
   const containerVariants = {
     hidden: {
       x: "50vw",
-      filter: "blur(100px)",
+      filter: "blur(50px)",
     },
     visible: {
       x: 0,
@@ -23,7 +23,7 @@ const Banner = () => {
         // velocity: 10000,
         type: "spring",
         duration: 0.8,
-        bounce: 0.1,
+        bounce: 0.05,
       },
     },
     exit: {
