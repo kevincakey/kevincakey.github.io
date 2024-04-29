@@ -20,8 +20,9 @@ const Banner = () => {
       x: 0,
       filter: "blur(0px)",
       transition: {
+        // velocity: 10000,
         type: "spring",
-        duration: 2,
+        duration: 0.8,
         bounce: 0.1,
       },
     },
@@ -35,6 +36,7 @@ const Banner = () => {
       },
     },
   };
+
   return (
     <AnimatePresence mode="wait">
       <motion.div

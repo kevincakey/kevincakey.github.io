@@ -10,6 +10,7 @@ import Banner from "../../components/Banner/Banner";
 const Home = () => {
   const containerVariants = {
     hidden: {
+      x: "-100vw",
       filter: "blur(100px)",
     },
     visible: {
@@ -18,7 +19,6 @@ const Home = () => {
       transition: {
         type: "spring",
         velocity: 1000,
-        delay: 2,
         duration: 0.5,
         bounce: 0.1,
       },

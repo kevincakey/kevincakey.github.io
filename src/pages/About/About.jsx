@@ -23,7 +23,7 @@ import { motion } from "framer-motion";
 const About = () => {
   const containerVariants = {
     hidden: {
-      x: "100vw",
+      x: "50vw",
       filter: "blur(100px)",
     },
     visible: {
@@ -37,7 +37,7 @@ const About = () => {
       },
     },
     exit: {
-      x: "-100vw",
+      x: "-50vw",
       filter: "blur(100px)",
       transition: {
         type: "spring",

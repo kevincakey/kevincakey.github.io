@@ -30,7 +30,7 @@ const Projects = () => {
 
   const containerVariants = {
     hidden: {
-      x: "100vw",
+      x: "50vw",
       filter: "blur(100px)",
     },
     visible: {
@@ -44,7 +44,7 @@ const Projects = () => {
       },
     },
     exit: {
-      x: "-100vw",
+      x: "-50vw",
       filter: "blur(100px)",
       transition: {
         type: "spring",
