@@ -18,12 +18,17 @@ import { ReactComponent as LikeIcon } from "../../assets/icons/likeIcon.svg";
 import { ReactComponent as PearIcon } from "../../assets/icons/pearIcon.svg";
 import { ReactComponent as PuzzleIcon } from "../../assets/icons/puzzleIcon.svg";
 import { ReactComponent as ExpressIcon } from "../../assets/icons/expressIcon.svg";
-import { ReactComponent as PythonIcon } from "../../assets/icons/pythonIcon.svg";
 import { ReactComponent as NodejsIcon } from "../../assets/icons/nodejsIcon.svg";
 import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.svg";
 import { ReactComponent as CIcon } from "../../assets/icons/c++.svg";
 import { ReactComponent as NumPyIcon } from "../../assets/icons/numpyIcon.svg";
 import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg";
+import { ReactComponent as ReactIcon } from "../../assets/icons/reactIcon.svg";
+import { ReactComponent as CssIcon } from "../../assets/icons/cssIcon.svg";
+import { ReactComponent as HtmlIcon } from "../../assets/icons/htmlIcon.svg";
+import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
+import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascriptIcon.svg";
+
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -32,7 +37,12 @@ const Projects = () => {
       name: "Messaging App",
       emblem: <ChatIcon />,
       website: "https://github.com/kevincakey/MessagingApp",
-      iconData: [],
+      iconData: [
+        { icon: <MongoDBIcon /> },
+        { icon: <ExpressIcon /> },
+        { icon: <ReactIcon /> },
+        { icon: <NodejsIcon /> },
+      ],
     },
     {
       name: "Fork",
@@ -40,7 +50,11 @@ const Projects = () => {
       website: "https://github.com/kevincakey/CS180-Fork",
       iconData: [
         /* Add custom icon data for this project */
-        { icon: <PythonIcon /> },
+        { icon: <JavascriptIcon /> },
+        { icon: <HtmlIcon /> },
+        { icon: <CssIcon /> },
+        { icon: <ReactIcon /> },
+        { icon: <GithubIcon /> },
       ],
     },
     {
@@ -49,6 +63,7 @@ const Projects = () => {
       website: "https://github.com/kevincakey/Zoomies",
       iconData: [
         /* Add custom icon data for this project */
+        { icon: <CIcon /> },
       ],
     },
     {
@@ -57,6 +72,8 @@ const Projects = () => {
       website: "https://github.com/kevincakey/CollaborativeRecommenderSystem",
       iconData: [
         /* Add custom icon data for this project */
+        { icon: <NumPyIcon /> },
+        { icon: <PandasIcon /> },
       ],
     },
     {
@@ -65,6 +82,7 @@ const Projects = () => {
       website: "https://github.com/kevincakey/EightPuzzleSearch",
       iconData: [
         /* Add custom icon data for this project */
+        { icon: <CIcon /> },
       ],
     },
     // Add more projects with their respective icon data

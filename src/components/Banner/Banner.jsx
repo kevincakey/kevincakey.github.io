@@ -6,9 +6,9 @@ import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import resumeIcon from "../../assets/icons/resumeIcon.lottie";
 import downloadIcon from "../../assets/icons/downloadIcon.lottie";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
+import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
+import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
 
 const Banner = () => {
   const containerVariants = {
@@ -55,12 +55,7 @@ const Banner = () => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/kevincakey/"
             >
-              <FontAwesomeIcon
-                id="linkedin-icon"
-                icon={faLinkedin}
-                size="lg"
-                style={{ color: "#ddb892" }}
-              />
+              <LinkedinIcon />
               https://www.linkedin.com/in/kevincakey
             </a>
           </div>
@@ -71,12 +66,7 @@ const Banner = () => {
               rel="noreferrer"
               href="https://github.com/kevincakey"
             >
-              <FontAwesomeIcon
-                id="github-icon"
-                icon={faGithub}
-                size="lg"
-                style={{ color: "#ddb892" }}
-              />
+              <GithubIcon />
               https://github.com/kevincakey
             </a>
           </div>

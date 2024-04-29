@@ -40,9 +40,24 @@
   }
   
   .icon-wrapper {
+	height: 12vh;
+	width: 12vh;
 	position: absolute;
-	margin-top:10vh;
-	left:1.5vw; /* Ensure position context */
-	z-index: 10; /* Set higher z-index for icon wrapper */
+	margin-top: 7vh;
+	z-index: 10;
+	display: flex; /* Use flexbox */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
   }
   
+  // Define CSS classes for SVG icons
+
+svg{
+	width: 2vw; // Set the width of SVG icons
+	height: 2vw; // Set the height of SVG icons
+}
+
+.icon-svg {
+	width: 2vw; // Set the width of SVG icons
+	height: 2vw; // Set the height of SVG icons
+  }

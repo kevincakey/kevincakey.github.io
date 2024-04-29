@@ -35,12 +35,14 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
           <div className="icon-wrapper">
             {icons &&
               icons.map(({ icon }, index) => (
-                <React.Fragment key={index}>
-                  {
-                    <React.Fragment>
-                      {icon} {/* Render SVG icon component */}
-                    </React.Fragment>
-                  }
+                <React.Fragment className="icon-svg" key={index}>
+                  {/* Check if the icon is an SVG component */}
+                  {typeof icon.type === "function" ? (
+                    <div className="icon-svg">{icon}</div>
+                  ) : (
+                    // Handle other types of icons (e.g., FontAwesomeIcon)
+                    <React.Fragment>{icon}</React.Fragment>
+                  )}
                 </React.Fragment>
               ))}
             {children}
