@@ -1,11 +1,15 @@
-.card {
+.card-container {
+	position: relative; /* Ensure the container is a positioned parent for absolute positioning */
+  }
+  
+  .card {
 	position: relative;
 	padding: 2vw;
 	top: 0;
-	border: 2px solid #ddb892;
+	border: 1px solid transparent; /* Initially transparent border */
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.3s, opacity 0.3s; /* Combine transitions */
+	transition: box-shadow 0.3s, border 0.3s; /* Add border transition */
 	height: 12vh;
 	width: 12vh;
 	overflow: hidden;
@@ -50,9 +54,31 @@
 	align-items: center; /* Center vertically */
   }
   
-  // Define CSS classes for SVG icons
-
-.icon-svg {
+  .icon-svg {
 	width: 2vw; // Set the width of SVG icons
 	height: 2vw; // Set the height of SVG icons
   }
+  
+  .project-description {
+	height: 12vh;
+	width: 12vh;
+	color: white;
+	font-size:0.6em;
+	font-family:itim;
+	position: absolute;
+	top: 40%; /* Move description to center of card */
+	left: 0;
+	transform: translate(-50%, -50%); /* Center description */
+	z-index: 1000;/* Initially hidden */
+	transition: opacity 0.3s; /* Add transition for opacity */
+  }
+  
+  .card:hover {
+	border: 1px solid #000; /* Add border on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .card:hover .project-description {
+	opacity: 1; /* Make the description visible on hover */
+  }
+  

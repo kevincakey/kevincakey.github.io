@@ -37,17 +37,21 @@ const Projects = () => {
       name: "Messaging App",
       emblem: <ChatIcon />,
       website: "https://github.com/kevincakey/MessagingApp",
+      description: "A messaging app built with MongoDB, Express, React, and Node.js",
       iconData: [
         { icon: <MongoDBIcon /> },
         { icon: <ExpressIcon /> },
         { icon: <ReactIcon /> },
         { icon: <NodejsIcon /> },
       ],
+
     },
     {
       name: "Fork",
       emblem: <ForkIcon />,
       website: "https://github.com/kevincakey/CS180-Fork",
+      description: "Bill-splitting app made with React, Paypal API, and TesseractOCR",
+
       iconData: [
         /* Add custom icon data for this project */
         { icon: <JavascriptIcon /> },
@@ -61,6 +65,7 @@ const Projects = () => {
       name: "Zoomies",
       emblem: <PearIcon />,
       website: "https://github.com/kevincakey/Zoomies",
+      description: "Partner Pairing program with csv data storage",
       iconData: [
         /* Add custom icon data for this project */
         { icon: <CIcon /> },
@@ -70,6 +75,7 @@ const Projects = () => {
       name: "Collaborative Recommender System",
       emblem: <LikeIcon />,
       website: "https://github.com/kevincakey/CollaborativeRecommenderSystem",
+      description: "Uses Collaborative Filtering to recommend magazines to users",
       iconData: [
         /* Add custom icon data for this project */
         { icon: <NumPyIcon /> },
@@ -80,6 +86,7 @@ const Projects = () => {
       name: "8-puzzle solver",
       emblem: <PuzzleIcon />,
       website: "https://github.com/kevincakey/EightPuzzleSearch",
+      description:"Solving an 8-puzzle using A* misplaced tile, Euclidean, and uniform cost search",
       iconData: [
         /* Add custom icon data for this project */
         { icon: <CIcon /> },
@@ -140,6 +147,7 @@ const Projects = () => {
             website={project.website}
             name={project.name}
             icons={project.iconData}
+            description={project.description}
           />
         ))}
       </motion.div>

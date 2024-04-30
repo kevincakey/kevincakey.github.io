@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ProjectCard.scss";
 
-const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
+const ProjectCard = ({ name, icons, tagList, website, emblem, description }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,11 +20,20 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
         rel="noopener noreferrer"
         className="card-link"
       >
+        <div className="project-description"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            opacity: isHovered ? "1":"0",
+          }}>
+          {description}
+          </div>
+
         <div
           className="card"
           style={{
             border: "1px solid",
-            filter: isHovered ? "brightness(80%) blur(2px)" : "none",
+            filter: isHovered ? "brightness(60%) blur(2px)" : "none",
             transition: "filter 0.3s",
           }}
           onMouseEnter={handleMouseEnter}
@@ -32,6 +41,7 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
         >
           <div className="emblem-wrapper">{emblem}</div>
           <h3>{name}</h3>
+  
           <div className="icon-wrapper">
             {icons &&
               icons.map(({ icon }, index) => (
@@ -45,7 +55,6 @@ const ProjectCard = ({ name, icons, tagList, website, children, emblem }) => {
                   )}
                 </React.Fragment>
               ))}
-            {children}
           </div>
         </div>
       </a>
