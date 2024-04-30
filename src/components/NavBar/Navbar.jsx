@@ -36,10 +36,10 @@ const Navbar = () => {
   }, []);
 
   const highlightPosition = {
-    "/": "0%",
-    "/About": "25%",
+    "/": "-150%",
+    "/About": "-50%",
     "/Projects": "50%",
-    "/Contact": "75%",
+    "/Contact": "150%",
   };
 
   return (
@@ -67,7 +67,15 @@ const Navbar = () => {
         transition={{ duration: 5 }}
       >
         <motion.ul id="navbar-icons">
+          <motion.div
+            className="highlight-bar"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ type: "spring", delay: 3, stiffness: 20 }}
+            style={{ y: highlightPosition[currentPath] }}
+          ></motion.div>
           <motion.li
+            className="navbar-icon"
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
@@ -82,6 +90,7 @@ const Navbar = () => {
             </Link>
           </motion.li>
           <motion.li
+            className="navbar-icon"
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
@@ -96,6 +105,7 @@ const Navbar = () => {
             </Link>
           </motion.li>
           <motion.li
+            className="navbar-icon"
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
@@ -112,6 +122,7 @@ const Navbar = () => {
             </Link>
           </motion.li>
           <motion.li
+            className="navbar-icon"
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 1, stiffness: 20 }}
@@ -127,10 +138,6 @@ const Navbar = () => {
               </div>
             </Link>
           </motion.li>
-          <motion.div
-            id="highlight-bar"
-            style={{ left: highlightPosition[currentPath] }}
-          ></motion.div>
         </motion.ul>
       </motion.nav>
       <div id="cakeBase"></div>

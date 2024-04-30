@@ -53,11 +53,6 @@ const Banner = () => {
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, [phrases]);
 
-  const textVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -100,7 +95,6 @@ const Banner = () => {
               className="animatedBannerText"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
             >
               {phrases[phraseIndex]}
             </motion.p>

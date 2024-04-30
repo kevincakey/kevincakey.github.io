@@ -16,7 +16,7 @@
   	padding: 0;
 	position:fixed;
 	right:0px;
-	z-index: 8;
+	z-index: 10;
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -56,7 +56,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center
+	align-items: center;
+	z-index:10;
+}
+
+.navbar-icon{
+	z-index:10;
 }
 
 .icon-background{
@@ -78,11 +83,11 @@
 
 .highlight-bar {
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 20vw; // Adjust based on the number of icons
-	height: 20vh;
-	background-color: #ffcc00; // Set your desired highlight color
+	width: 10vh; /* Occupy the full width of the navbar */
+	height: 10vh; /* Divide the height of the navbar by the number of icons */
+	border-radius: 30%;
+	background-color: #b08968; /* Set your desired highlight color */
 	transition: transform 0.3s ease;
-	z-index: 1000;
+	z-index: 9;
   }
+  
