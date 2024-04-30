@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
-import Banner from "../../components/Banner/Banner";
 import emailjs from "@emailjs/browser";
 import Map from "../../components/Map/Map.jsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [emailError, setEmailError] = useState("");
+
   const sendEmail = (e) => {
     e.preventDefault();
+    const { name, email, subject, message } = e.target;
+
+    // Validate email format
+    if (!validateEmail(email.value)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+
+    // Send email using emailjs
     emailjs
       .sendForm(
         "service_qp35vwp",
@@ -23,7 +33,16 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+
+    // Reset form and clear email error
     e.target.reset();
+    setEmailError("");
+  };
+
+  // Function to validate email format
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
 
   const containerVariants = {
@@ -55,7 +74,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* <Banner></Banner> */}
       <motion.div
         id="contact-container"
         variants={containerVariants}
@@ -84,6 +102,7 @@ const Contact = () => {
             <textarea placeholder="Message" name="message" required></textarea>
             <input type="submit" value="SEND" />
           </form>
+          {emailError && <p className="error">{emailError}</p>}
         </div>
         <Map id="map" />
       </motion.div>

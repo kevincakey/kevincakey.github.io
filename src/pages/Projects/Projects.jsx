@@ -1,17 +1,6 @@
 import React from "react";
 import "./Projects.scss";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import Banner from "../../components/Banner/Banner";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-  faSass,
-  faPython,
-} from "@fortawesome/free-brands-svg-icons";
 import { ReactComponent as ChatIcon } from "../../assets/icons/chatIcon.svg";
 import { ReactComponent as ForkIcon } from "../../assets/icons/fork.svg";
 import { ReactComponent as LikeIcon } from "../../assets/icons/likeIcon.svg";
@@ -24,8 +13,6 @@ import { ReactComponent as CIcon } from "../../assets/icons/c++.svg";
 import { ReactComponent as NumPyIcon } from "../../assets/icons/numpyIcon.svg";
 import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg";
 import { ReactComponent as ReactIcon } from "../../assets/icons/reactIcon.svg";
-import { ReactComponent as CssIcon } from "../../assets/icons/cssIcon.svg";
-import { ReactComponent as HtmlIcon } from "../../assets/icons/htmlIcon.svg";
 import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
 import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascriptIcon.svg";
 

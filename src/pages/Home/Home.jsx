@@ -3,9 +3,7 @@ import "./Home.scss";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import cakeAnimation from "../../assets/icons/cakeAnimation.lottie";
-import { motion, AnimatePresence } from "framer-motion";
-import splatSound from "../../assets/sounds/splat.mp3";
-import Banner from "../../components/Banner/Banner";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const containerVariants = {

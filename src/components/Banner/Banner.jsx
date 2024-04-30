@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import resumeIcon from "../../assets/icons/resumeIcon.lottie";
-import downloadIcon from "../../assets/icons/downloadIcon.lottie";
 import { motion, AnimatePresence } from "framer-motion";
 import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
