@@ -1,5 +1,5 @@
 import "./Banner.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import resume from "../../assets/KevinGao'sResume.pdf";
 import { Link } from "react-router-dom";
 import { DotLottiePlayer } from "@dotlottie/react-player";
@@ -38,19 +38,17 @@ const Banner = () => {
   };
 
   const [bannerText, setBannerText] = useState("Hi! I am Kevin Gao! ");
-  const phrases = [
-    "Aspiring Developer",
-    "MS student",
-    "Passionate Learner",
-    // Add more phrases as needed
-  ];
+  const phrases = useMemo(
+    () => ["Aspiring Developer", "MS student", "Passionate Learner"],
+    []
+  );
   const [phraseIndex, setPhraseIndex] = useState(0);
 
   useEffect(() => {
     // Change the banner text every 5 seconds
     const interval = setInterval(() => {
       setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, [phrases]);

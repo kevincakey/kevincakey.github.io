@@ -37,26 +37,25 @@ const Projects = () => {
       name: "Messaging App",
       emblem: <ChatIcon />,
       website: "https://github.com/kevincakey/MessagingApp",
-      description: "A messaging app built with MongoDB, Express, React, and Node.js",
+      description:
+        "A messaging app built with MongoDB, Express, React, and Node.js",
       iconData: [
         { icon: <MongoDBIcon /> },
         { icon: <ExpressIcon /> },
         { icon: <ReactIcon /> },
         { icon: <NodejsIcon /> },
       ],
-
     },
     {
       name: "Fork",
       emblem: <ForkIcon />,
       website: "https://github.com/kevincakey/CS180-Fork",
-      description: "Bill-splitting app made with React, Paypal API, and TesseractOCR",
+      description:
+        "Bill-splitting app made with React, Paypal API, and TesseractOCR",
 
       iconData: [
         /* Add custom icon data for this project */
         { icon: <JavascriptIcon /> },
-        { icon: <HtmlIcon /> },
-        { icon: <CssIcon /> },
         { icon: <ReactIcon /> },
         { icon: <GithubIcon /> },
       ],
@@ -75,7 +74,8 @@ const Projects = () => {
       name: "Collaborative Recommender System",
       emblem: <LikeIcon />,
       website: "https://github.com/kevincakey/CollaborativeRecommenderSystem",
-      description: "Uses Collaborative Filtering to recommend magazines to users",
+      description:
+        "Uses Collaborative Filtering to recommend magazines to users",
       iconData: [
         /* Add custom icon data for this project */
         { icon: <NumPyIcon /> },
@@ -86,7 +86,8 @@ const Projects = () => {
       name: "8-puzzle solver",
       emblem: <PuzzleIcon />,
       website: "https://github.com/kevincakey/EightPuzzleSearch",
-      description:"Solving an 8-puzzle using A* misplaced tile, Euclidean, and uniform cost search",
+      description:
+        "Solving an 8-puzzle using A* misplaced tile, Euclidean, and uniform cost search",
       iconData: [
         /* Add custom icon data for this project */
         { icon: <CIcon /> },

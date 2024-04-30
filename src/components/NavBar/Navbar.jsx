@@ -35,6 +35,13 @@ const Navbar = () => {
     }, 4000);
   }, []);
 
+  const highlightPosition = {
+    "/": "0%",
+    "/About": "25%",
+    "/Projects": "50%",
+    "/Contact": "75%",
+  };
+
   return (
     <div className={navbarClass}>
       <div id="topCake"></div>
@@ -120,6 +127,10 @@ const Navbar = () => {
               </div>
             </Link>
           </motion.li>
+          <motion.div
+            id="highlight-bar"
+            style={{ left: highlightPosition[currentPath] }}
+          ></motion.div>
         </motion.ul>
       </motion.nav>
       <div id="cakeBase"></div>
