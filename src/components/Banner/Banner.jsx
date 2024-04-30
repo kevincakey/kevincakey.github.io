@@ -11,6 +11,32 @@ import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg"
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
 
 const Banner = () => {
+  const containerVariants = {
+    hidden: {
+      x: "50vw",
+      filter: "blur(50px)",
+    },
+    visible: {
+      x: 0,
+      filter: "blur(0px)",
+      transition: {
+        // velocity: 10000,
+        type: "spring",
+        duration: 0.8,
+        bounce: 0.05,
+      },
+    },
+    exit: {
+      // x: "50vw",
+      filter: "blur(100px)",
+      transition: {
+        type: "spring",
+        duration: 5,
+        bounce: 0.1,
+      },
+    },
+  };
+
   const [bannerText, setBannerText] = useState("Hi! I am Kevin Gao! ");
   const phrases = [
     "Aspiring Developer",
@@ -38,9 +64,10 @@ const Banner = () => {
     <AnimatePresence mode="wait">
       <motion.div
         id="banner"
-        initial={{ x: "50vw", filter: "blur(50px)" }}
-        animate={{ x: 0, filter: "blur(0px)" }}
-        exit={{ filter: "blur(100px)" }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         <div id="backdrop"></div>
         <div id="topCake">
@@ -68,18 +95,18 @@ const Banner = () => {
           </div>
         </div>
         <div id="bannerBody">
-        <p className="bannerText">{bannerText}</p>
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={phraseIndex}
-            className="animatedBannerText"
-            initial={{ opacity: 0, }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            {phrases[phraseIndex]}
-          </motion.p>
-        </AnimatePresence>
+          <p className="bannerText">{bannerText}</p>
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={phraseIndex}
+              className="animatedBannerText"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {phrases[phraseIndex]}
+            </motion.p>
+          </AnimatePresence>
           <Link to="/Contact" id="contactButton" className="links">
             Add me to your team !
           </Link>
