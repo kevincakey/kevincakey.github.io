@@ -43,7 +43,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className={navbarClass}>
+    <motion.div
+      className={navbarClass}
+      initial={{ backgroundColor: "#7F5539" }}
+      animate={{ backgroundColor: currentPath === "/" ? "#7F5539" : "#ddb892" }}
+      transition={{ duration: 0.2 }}
+    >
       <div id="topCake"></div>
       <AnimatePresence>
         {showMsg && (
@@ -141,7 +146,7 @@ const Navbar = () => {
         </motion.ul>
       </motion.nav>
       <div id="cakeBase"></div>
-    </div>
+    </motion.div>
   );
 };
 
