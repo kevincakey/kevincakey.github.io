@@ -44,7 +44,7 @@
 #github-icon,
 #linkedin-icon {
     position:absolute;
-    margin-left: -1.5vw;
+    margin-left: -1.75vw;
     height:1.5vw;
     width:1.5vw;
     margin-top:-0.2vh;
@@ -134,17 +134,17 @@
     height: 28vh;
     position: absolute;
     bottom: 3vh;
-    right:14.5vw;
+    right:14vw;
     z-index:2; /* Adjust as needed */
     // right: 0;
 }
 
 #resumeIcon {
-    position: relative;
+    position: absolute;
     width: 40vw;
     height: 50vh;
     display: flex;
-    bottom: -4.2vh; /* Adjust as needed */
+    bottom: -9vh; /* Adjust as needed */
     right: -1vw; /* Adjust as needed */
     z-index: 1;
 }
@@ -178,6 +178,7 @@
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     cursor: pointer;
     background-color: transparent;
+    margin-bottom:1vh;
 }
 
 #resume-button:hover {
