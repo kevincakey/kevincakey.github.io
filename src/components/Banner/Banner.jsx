@@ -1,5 +1,5 @@
 import "./Banner.scss";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import resume from "../../assets/KevinGao'sResume.pdf";
 import { Link } from "react-router-dom";
 import { DotLottiePlayer } from "@dotlottie/react-player";
@@ -11,40 +11,36 @@ import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg"
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
 
 const Banner = () => {
-  const containerVariants = {
-    hidden: {
-      x: "50vw",
-      filter: "blur(50px)",
-    },
-    visible: {
-      x: 0,
-      filter: "blur(0px)",
-      transition: {
-        // velocity: 10000,
-        type: "spring",
-        duration: 0.8,
-        bounce: 0.05,
-      },
-    },
-    exit: {
-      // x: "50vw",
-      filter: "blur(100px)",
-      transition: {
-        type: "spring",
-        duration: 5,
-        bounce: 0.1,
-      },
-    },
+  const [bannerText, setBannerText] = useState("Hi! I am Kevin Gao! ");
+  const phrases = [
+    "Aspiring Developer",
+    "MS student",
+    "Passionate Learner",
+    // Add more phrases as needed
+  ];
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    // Change the banner text every 5 seconds
+    const interval = setInterval(() => {
+      setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 3000);
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, [phrases]);
+
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
     <AnimatePresence mode="wait">
       <motion.div
         id="banner"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
+        initial={{ x: "50vw", filter: "blur(50px)" }}
+        animate={{ x: 0, filter: "blur(0px)" }}
+        exit={{ filter: "blur(100px)" }}
       >
         <div id="backdrop"></div>
         <div id="topCake">
@@ -72,9 +68,18 @@ const Banner = () => {
           </div>
         </div>
         <div id="bannerBody">
-          <p id="bannerText">
-            Hi! I am Kevin Gao <br /> Aspiring Developer <br /> MS student
-          </p>
+        <p className="bannerText">{bannerText}</p>
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={phraseIndex}
+            className="animatedBannerText"
+            initial={{ opacity: 0, }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {phrases[phraseIndex]}
+          </motion.p>
+        </AnimatePresence>
           <Link to="/Contact" id="contactButton" className="links">
             Add me to your team !
           </Link>
