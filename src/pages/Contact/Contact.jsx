@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const [emailError, setEmailError] = useState("");
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -28,6 +29,10 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setShowSuccessPopup(true);
+          setTimeout(() => {
+            setShowSuccessPopup(false);
+          }, 3000); // Close the success popup after 3 seconds
         },
         (error) => {
           console.log(error.text);
@@ -103,6 +108,11 @@ const Contact = () => {
             <input type="submit" value="SEND" />
           </form>
           {emailError && <p className="error">{emailError}</p>}
+          {showSuccessPopup && (
+            <div className="success-popup">
+              <p>Email sent successfully!</p>
+            </div>
+          )}
         </div>
         <Map id="map" />
       </motion.div>
