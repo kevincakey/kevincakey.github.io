@@ -89,6 +89,24 @@ const Home = () => {
             background="transparent"
           ></DotLottiePlayer>
         </motion.div>
+        <div id="attribution">
+          <p>
+            Icons by:
+            <a
+              className="links"
+              target="_blank"
+              rel="noreferrer"
+              href="https://icons8.com/"
+            >
+              Icons8
+            </a>
+          </p>
+          <p>
+            Animated Icons by: LottieFiles, Cake: Vishal Mahor, Resume: Raksha S
+          </p>
+          <p>Fonts by: Khurasan, Patrick Wagesreiter, and Cadson Demak</p>
+          <p>Libraries used: Leaflet, Framer, emailjs, react-router-dom</p>
+        </div>
       </div>
     </>
   );

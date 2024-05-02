@@ -18,6 +18,27 @@ import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.sv
 import { ReactComponent as CIcon } from "../../assets/icons/c++.svg";
 import { ReactComponent as NumPyIcon } from "../../assets/icons/numpyIcon.svg";
 import { motion } from "framer-motion";
+import teachingresume from "../../assets/TeachingResume.pdf";
+
+const iconData = [
+  { name: "Python", icon: <PythonIcon /> },
+  { name: "C++", icon: <CIcon /> },
+  { name: "React", icon: <ReactIcon /> },
+  { name: "Javascript", icon: <JavascriptIcon /> },
+  { name: "SQL", icon: <SQLIcon /> },
+  { name: "MongoDB", icon: <MongoDBIcon /> },
+  { name: "NodeJS", icon: <NodejsIcon /> },
+  { name: "ExpressJS", icon: <ExpressIcon /> },
+  { name: "Github", icon: <GithubIcon /> },
+  { name: "Git", icon: <GitIcon /> },
+  { name: "Sass", icon: <SassIcon /> },
+  { name: "HTML", icon: <HtmlIcon /> },
+  { name: "CSS", icon: <CssIcon /> },
+  { name: "Pandas", icon: <PandasIcon /> },
+  { name: "NumPy", icon: <NumPyIcon /> },
+  { name: "Java", icon: <JavaIcon /> },
+  { name: "JQuery", icon: <JQueryIcon /> },
+];
 
 const About = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -78,173 +99,38 @@ const About = () => {
       >
         <div id="about-body">
           <h2>
-            Currently exploring software development and data science. <br />
-            Looking for opportunities to learn more <br />
+            Exploring software development and data science. <br />
+            Looking for opportunities to learn and apply skills. <br />
           </h2>
           <h3>
             Open to full/part-time jobs, internships, website contracting, and
-            private tutoring !!link secret teaching resume!!.
+            <a
+              href={teachingresume}
+              target="_blank"
+              rel="noreferrer"
+              id="teaching-link"
+            >
+              {" "}
+              tutoring
+            </a>
           </h3>
           <ul className="icon-grid">
-            <li
-              onMouseEnter={() => handleMouseEnter("python")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <PythonIcon
-                className={`svgIcons ${hoveredIcon === "python" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "python" && <span>Python</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("c")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <CIcon
-                className={`svgIcons ${hoveredIcon === "c" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "c" && <span>C++</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("react")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <ReactIcon
-                className={`svgIcons ${hoveredIcon === "react" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "react" && <span>React</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("javascript")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <JavascriptIcon
-                className={`svgIcons ${
-                  hoveredIcon === "javascript" ? "blur" : ""
-                }`}
-              />
-              {hoveredIcon === "javascript" && <span>Javascript</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("sql")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <SQLIcon
-                className={`svgIcons ${hoveredIcon === "sql" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "sql" && <span>SQL</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("mongodb")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <MongoDBIcon
-                className={`svgIcons ${
-                  hoveredIcon === "mongodb" ? "blur" : ""
-                }`}
-              />
-              {hoveredIcon === "mongodb" && <span>MongoDB</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("nodejs")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <NodejsIcon
-                className={`svgIcons ${hoveredIcon === "nodejs" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "nodejs" && <span>Node.js</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("express")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <ExpressIcon
-                className={`svgIcons ${
-                  hoveredIcon === "express" ? "blur" : ""
-                }`}
-              />
-              {hoveredIcon === "express" && <span>Express</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("github")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <GithubIcon
-                className={`svgIcons ${hoveredIcon === "github" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "github" && <span>Github</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("git")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <GitIcon
-                className={`svgIcons ${hoveredIcon === "git" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "git" && <span>Git</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("sass")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <SassIcon
-                className={`svgIcons ${hoveredIcon === "sass" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "sass" && <span>Sass</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("html")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <HtmlIcon
-                className={`svgIcons ${hoveredIcon === "html" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "html" && <span>HTML</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("css")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <CssIcon
-                className={`svgIcons ${hoveredIcon === "css" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "css" && <span>CSS</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("pandas")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <PandasIcon
-                className={`svgIcons ${hoveredIcon === "pandas" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "pandas" && <span>Pandas</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("numpy")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <NumPyIcon
-                className={`svgIcons ${hoveredIcon === "numpy" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "numpy" && <span>NumPy</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("java")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <JavaIcon
-                className={`svgIcons ${hoveredIcon === "java" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "java" && <span>Java</span>}
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter("jquery")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <JQueryIcon
-                className={`svgIcons ${hoveredIcon === "jquery" ? "blur" : ""}`}
-              />
-              {hoveredIcon === "jquery" && <span>jQuery</span>}
-            </li>
+            {iconData.map((icon, index) => (
+              <li
+                key={index}
+                onMouseEnter={() => handleMouseEnter(icon.name.toLowerCase())}
+                onMouseLeave={handleMouseLeave}
+              >
+                {React.cloneElement(icon.icon, {
+                  className: `svgIcons ${
+                    hoveredIcon === icon.name.toLowerCase() ? "blur" : ""
+                  }`,
+                })}
+                {hoveredIcon === icon.name.toLowerCase() && (
+                  <span>{icon.name}</span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </motion.div>

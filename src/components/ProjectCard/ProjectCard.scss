@@ -1,6 +1,5 @@
 .card-container {
 	position: relative; /* Ensure the container is a positioned parent for absolute positioning */
-  }
   
   .card {
 	position: relative;
@@ -62,7 +61,7 @@
   .project-description {
 	height: 12vh;
 	width: 12vh;
-	color: white;
+	color: #ede0d4;
 	font-size:0.6em;
 	font-family:itim;
 	position: absolute;
@@ -81,4 +80,4 @@
   .card:hover .project-description {
 	opacity: 1; /* Make the description visible on hover */
   }
-  
+}
