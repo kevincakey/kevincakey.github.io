@@ -48,8 +48,7 @@ const Banner = () => {
     const interval = setInterval(() => {
       setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
     }, 5000);
-
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+    // Clean up the interval on component unmount
   }, [phrases]);
 
   return (
