@@ -73,13 +73,14 @@
 	}
 
 	.success-popup {
-		position: fixed;
-		bottom: 20px;
+		position: absolute;
+		font-size: 0.6em;
 		left: 50%;
+		top: 40%;
 		transform: translateX(-50%);
 		background-color: rgba(0, 0, 0, 0.8);
 		color: white;
-		padding: 10px 20px;
+		padding: 1vh 2vw;
 		border-radius: 5px;
 		z-index: 1000;
 	}
