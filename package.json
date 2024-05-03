@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kevincakey.github.io/",
+  "homepage": "https://kevincakey.github.io",
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",
     "@emailjs/browser": "^4.3.3",
