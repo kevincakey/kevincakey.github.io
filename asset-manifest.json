@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c92a057c.css",
-    "main.js": "/static/js/main.b75529e4.js",
+    "main.js": "/static/js/main.2139979e.js",
     "static/js/531.070492d6.chunk.js": "/static/js/531.070492d6.chunk.js",
     "static/js/337.d4259f63.chunk.js": "/static/js/337.d4259f63.chunk.js",
     "static/js/12.d70dec77.chunk.js": "/static/js/12.d70dec77.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/KevinGao'sResume.pdf": "/static/media/KevinGao'sResume.4365ba2c9ad2efdbcead.pdf",
     "static/media/TeachingResume.pdf": "/static/media/TeachingResume.4b09b4a3d3e3e8cf0e85.pdf",
     "static/media/CoffeCake.ttf": "/static/media/CoffeCake.3c79254c92699199f21d.ttf",
-    "static/media/cakeAnimation.lottie": "/static/media/cakeAnimation.24816bece97ed5be0a56.lottie",
+    "static/media/cakeAnimation.lottie": "/static/media/cakeAnimation.3036de4c5d516f660cf3.lottie",
     "static/media/Karla-Regular-S52ZIU5L.woff": "/static/media/Karla-Regular-S52ZIU5L.3ac28a6ac03a9f7f3d82.woff",
     "static/media/homeIcon.lottie": "/static/media/homeIcon.e3ba8b5e66f84e4877e4.lottie",
     "static/media/aboutIcon.lottie": "/static/media/aboutIcon.69287a3efa09e9e6fa15.lottie",
@@ -48,10 +48,10 @@
     "static/media/cssIcon.svg": "/static/media/cssIcon.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
     "static/media/htmlIcon.svg": "/static/media/htmlIcon.c1bb84e022ca9d76984d4b943bd678fd.svg",
     "main.c92a057c.css.map": "/static/css/main.c92a057c.css.map",
-    "main.b75529e4.js.map": "/static/js/main.b75529e4.js.map"
+    "main.2139979e.js.map": "/static/js/main.2139979e.js.map"
   },
   "entrypoints": [
     "static/css/main.c92a057c.css",
-    "static/js/main.b75529e4.js"
+    "static/js/main.2139979e.js"
   ]
 }
