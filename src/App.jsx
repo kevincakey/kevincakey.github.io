@@ -43,7 +43,7 @@ function App() {
         {isMobile && (
           <div id="mobileResume">
             <a
-              id="view-resume-link"
+              id="mobile-resume-link"
               href={resume}
               target="_blank"
               rel="noreferrer"

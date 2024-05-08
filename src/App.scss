@@ -83,6 +83,14 @@
       z-index:3;
       position:fixed;
       bottom:-9vh;
-      right:-11vw;
+      right:-12vw;
+    }
+    #mobile-resume-link{
+      z-index:4;
+      position:fixed;
+      bottom:0;
+      right:0;
+      width: 15vw;
+      height: 15vh;
     }
   }
