@@ -85,4 +85,26 @@
 		z-index: 1000;
 	}
 
-	@media screen and (max-width: 768px) {}
+	@media screen and (max-width: 768px) {
+	  
+		.contactForm form input,
+		.contactForm form textarea {
+		  margin: 0.5vw; /* Adjust margin */
+		  width: 80vw; /* Set width to fill most of the screen */
+		  padding: 2.5vw; /* Adjust padding */
+		  font-size: 0.8em; /* Increase font size */
+		  border-radius: 3vw;
+		}
+	  
+		.contactForm form input[type='submit'] {
+		  width: 20vw; /* Set submit button width */
+		  padding: 1vw; /* Adjust padding */
+		  font-size: 0.8em; /* Increase font size */
+		  border-radius: 3vw;
+		}
+
+		#map{
+			bottom:0;
+		}
+	  }
+	  
