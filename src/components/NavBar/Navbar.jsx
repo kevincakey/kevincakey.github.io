@@ -66,7 +66,11 @@ const Navbar = () => {
     <motion.div
       className={navbarClass}
       initial={{ backgroundColor: "#7F5539" }}
-      animate={{ backgroundColor: currentPath === "/" ? "#7F5539" : "#ddb892" }}
+      animate={
+        isMobile
+          ? { backgroundColor: "#7F5539" }
+          : { backgroundColor: currentPath === "/" ? "#7F5539" : "#ddb892" }
+      }
       transition={{ duration: 0.2 }}
     >
       <div id="topCake"></div>

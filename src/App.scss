@@ -69,14 +69,20 @@
   @media screen and (max-width: 768px) {
     .App-header {
       width: 100vw;
-      bottom:0;
+      top:0;
       right:0;
-      height: 50vh;
+      height: 100vh;
     }
 
     #cover{
       top:0;
       width:100vw;
       height:50vh;
+    }
+    #mobileResume{
+      z-index:3;
+      position:fixed;
+      bottom:-9vh;
+      right:-11vw;
     }
   }
