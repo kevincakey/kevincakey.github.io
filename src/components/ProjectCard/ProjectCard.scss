@@ -81,3 +81,38 @@
 	opacity: 1; /* Make the description visible on hover */
   }
 }
+
+@media screen and (max-width: 768px) {
+	.card-container .card {
+    height: 18vh; /* Set card height */
+    width: 18vh; /* Set card width */
+  	}
+
+	  .card-container .emblem-wrapper {
+		top: 0.5vh;
+		right: 0.4vw;
+		width:8vw;
+		height:8vw;
+	}
+
+	.card-container .icon-wrapper {
+		margin-top:12vh;
+		height: 6vh;
+		width: 18vh;
+	  }
+	  .card-container .icon-svg {
+		width: 8vw; // Set the width of SVG icons
+		height: 8vw; // Set the height of SVG icons
+	  }
+
+	  .card-container  .project-description {
+		height: 16vh;
+		width: 16vh;
+		margin-top:2vh;
+		font-size:0.8em;
+	  }
+
+	  .card-container  h3{
+		margin-top:5vh;
+	  }
+}
