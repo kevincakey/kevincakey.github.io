@@ -65,3 +65,18 @@
 	width: 50vw;
 	background-color: #7F5539;
   }
+
+  @media screen and (max-width: 768px) {
+    .App-header {
+      width: 100vw;
+      bottom:0;
+      right:0;
+      height: 50vh;
+    }
+
+    #cover{
+      top:0;
+      width:100vw;
+      height:50vh;
+    }
+  }

@@ -48,3 +48,11 @@
 	font-size: 0.3em;
 	color: #b08968;
   }
+
+  @media screen and (max-width: 768px) {
+    #cover {
+		width: 100vw;
+        top:0;
+		left:0;
+        height: 50vh;}
+}
