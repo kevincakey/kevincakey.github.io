@@ -80,3 +80,19 @@
 		color: #9c6644;
 	  }
   }
+
+  @media screen and (max-width: 768px) {
+	.icon-grid{
+		margin-top: 10vh;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(8vw, 1fr)); /* Adjust as needed */
+		grid-gap: 8vw; /* Adjust the gap between icons */
+		list-style: none;
+		padding: 0;
+	}
+
+	.svgIcons {
+		height: 8vw;
+		width: 8vw;
+	  }
+  }
