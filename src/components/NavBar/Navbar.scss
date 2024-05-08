@@ -91,3 +91,35 @@
 	z-index: 9;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+        width: 100%;
+        height: 10vh;
+        flex-direction: row; /* Change to row for mobile view */
+        justify-content: space-around;
+        top: 0; /* Reset top positioning */
+        left: 0; /* Align to the left of the screen */
+    }
+
+    #navbar-icons {
+        flex-direction: row; /* Change to row for mobile view */
+        width: auto; /* Let the width adjust based on content */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+	#cakeBase, #topCake{opacity:0;}
+
+    .navbar-icon {
+        width: 10vh; /* Set width of each icon */
+        height: auto; /* Let height adjust based on width */
+        margin: 0 1vh; /* Add margin between icons */
+    }
+
+    .icon-background {
+        height: 10vh; /* Increase height of icon background */
+        width: 10vh; /* Set width of icon background */
+        border-radius: 50%; /* Ensure rounded shape */
+    }
+}

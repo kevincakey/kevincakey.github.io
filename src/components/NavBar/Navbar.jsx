@@ -35,12 +35,32 @@ const Navbar = () => {
     }, 4000);
   }, []);
 
-  const highlightPosition = {
+  const verticalHighlightPosition = {
     "/": "-150%",
     "/About": "-50%",
     "/Projects": "50%",
     "/Contact": "150%",
   };
+
+  const horizontalHighlightPosition = {
+    "/": "-180%",
+    "/About": "-60%",
+    "/Projects": "60%",
+    "/Contact": "180%",
+  };
+
+  const resethighlightPosition = {
+    "/": "0%",
+    "/About": "0%",
+    "/Projects": "0%",
+    "/Contact": "0%",
+  };
+
+  const isMobile = window.innerWidth <= 768;
+
+  // Determine which property to use for positioning based on screen size
+  const positionProperty = isMobile ? "x" : "y";
+  const antipositionProperty = positionProperty === "x" ? "y" : "x";
 
   return (
     <motion.div
@@ -77,7 +97,13 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ type: "spring", delay: 3, stiffness: 20 }}
-            style={{ y: highlightPosition[currentPath] }}
+            style={{
+              [positionProperty]:
+                positionProperty === "x"
+                  ? horizontalHighlightPosition[currentPath]
+                  : verticalHighlightPosition[currentPath],
+              [antipositionProperty]: resethighlightPosition[currentPath],
+            }}
           ></motion.div>
           <motion.li
             className="navbar-icon"
