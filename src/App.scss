@@ -74,11 +74,11 @@
       height: 100vh;
     }
 
-    #cover{
-      top:0;
-      width:100vw;
-      height:50vh;
-    }
+    // #cover{
+    //   top:0;
+    //   width:100vw;
+    //   height:50vh;
+    // }
     #mobileResume{
       z-index:3;
       position:fixed;
@@ -92,5 +92,11 @@
       right:0;
       width: 15vw;
       height: 15vh;
+    }
+    .title {
+      font-size: 3em;
+      position: fixed;
+      top: 15vh;
+      left: 30vw;
     }
   }
