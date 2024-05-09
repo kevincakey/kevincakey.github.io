@@ -84,7 +84,7 @@
 
 @media screen and (max-width: 768px) {
 	.card-container .card {
-    height: 18vh; /* Set card height */
+    height: 16vh; /* Set card height */
     width: 18vh; /* Set card width */
   	}
 
@@ -96,23 +96,25 @@
 	}
 
 	.card-container .icon-wrapper {
-		margin-top:12vh;
+		margin-top:8vh;
 		height: 6vh;
 		width: 18vh;
 	  }
 	  .card-container .icon-svg {
+		padding-right: 2vw;
 		width: 8vw; // Set the width of SVG icons
 		height: 8vw; // Set the height of SVG icons
 	  }
 
 	  .card-container  .project-description {
-		height: 16vh;
-		width: 16vh;
-		margin-top:2vh;
-		font-size:0.8em;
+		// height: 16vh;
+		// width: 16vh;
+		// margin-top:2vh;
+		// font-size:0.8em;
+		opacity:0;
 	  }
 
 	  .card-container  h3{
-		margin-top:5vh;
+		margin-top:3vh;
 	  }
 }
