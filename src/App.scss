@@ -82,7 +82,8 @@
     #mobileResume{
       z-index:3;
       position:fixed;
-      bottom:-15vh;
+      bottom:auto;
+      top:108vh;
       right:-12vw;
     }
     #mobile-resume-link{
