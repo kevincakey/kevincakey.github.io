@@ -62,7 +62,7 @@
   @media screen and (max-width: 768px) {
 	#projects-container {
 		position:absolute;
-		top: 20vh;
+		top: 16vh;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr)); /* Adjust column width */
 		grid-gap: 4vw; /* Adjust gap between cards */
