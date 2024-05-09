@@ -86,7 +86,9 @@
 	}
 
 	@media screen and (max-width: 768px) {
-	  
+	  .contactForm{
+		margin-bottom: 0;
+	  }
 		.contactForm form input,
 		.contactForm form textarea {
 		  margin: 0.5vw; /* Adjust margin */
