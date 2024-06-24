@@ -35,6 +35,7 @@ const ProjectCard = ({
             opacity: isHovered ? "1" : "0",
           }}
         >
+          <h3 className="project-name">{name}</h3>
           {description}
         </div>
 
@@ -49,7 +50,6 @@ const ProjectCard = ({
           onMouseLeave={handleMouseLeave}
         >
           <div className="emblem-wrapper">{emblem}</div>
-          <h3>{name}</h3>
 
           <div className="icon-wrapper">
             {icons &&

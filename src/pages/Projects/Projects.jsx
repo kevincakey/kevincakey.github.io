@@ -15,11 +15,42 @@ import { ReactComponent as PandasIcon } from "../../assets/icons/pandasIcon.svg"
 import { ReactComponent as ReactIcon } from "../../assets/icons/reactIcon.svg";
 import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
 import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascriptIcon.svg";
+import { ReactComponent as NextjsIcon } from "../../assets/icons/nextjsIcon.svg";
+import { ReactComponent as SupabaseIcon } from "../../assets/icons/supabaseIcon.svg";
+import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescriptIcon.svg";
+import { ReactComponent as TailwindcssIcon } from "../../assets/icons/tailwindcssIcon.svg";
+import { ReactComponent as TodoIcon } from "../../assets/icons/todoIcon.svg";
+import { ReactComponent as EventmakerIcon } from "../../assets/icons/eventmakerIcon.svg";
 
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const projectIcons = [
+    {
+      name: "Events Planner",
+      emblem: <EventmakerIcon />,
+      website: "https://eventplanner-kevincakey.vercel.app",
+      description:
+        "View events without an account, and add/delete/edit events with an account",
+      iconData: [
+        { icon: <NextjsIcon /> },
+        { icon: <SupabaseIcon /> },
+        { icon: <TypescriptIcon /> },
+        { icon: <TailwindcssIcon /> },
+      ],
+    },
+    {
+      name: "Todo List",
+      emblem: <TodoIcon />,
+      website: "https://todolist-kevincakeys-projects.vercel.app",
+      description: "Simple todolist using Next.js, Supabase, and TypeScript",
+      iconData: [
+        { icon: <NextjsIcon /> },
+        { icon: <SupabaseIcon /> },
+        { icon: <TypescriptIcon /> },
+        { icon: <TailwindcssIcon /> },
+      ],
+    },
     {
       name: "Messaging App",
       emblem: <ChatIcon />,
