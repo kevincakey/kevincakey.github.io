@@ -17,6 +17,10 @@ import { ReactComponent as SQLIcon } from "../../assets/icons/sqlIcon.svg";
 import { ReactComponent as MongoDBIcon } from "../../assets/icons/mongodbIcon.svg";
 import { ReactComponent as CIcon } from "../../assets/icons/c++.svg";
 import { ReactComponent as NumPyIcon } from "../../assets/icons/numpyIcon.svg";
+import { ReactComponent as NextjsIcon } from "../../assets/icons/nextjsIcon.svg";
+import { ReactComponent as SupabaseIcon } from "../../assets/icons/supabaseIcon.svg";
+import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescriptIcon.svg";
+import { ReactComponent as TailwindcssIcon } from "../../assets/icons/tailwindcssIcon.svg";
 import { motion } from "framer-motion";
 import teachingresume from "../../assets/TeachingResume.pdf";
 
@@ -26,6 +30,10 @@ const iconData = [
   { name: "React", icon: <ReactIcon /> },
   { name: "Javascript", icon: <JavascriptIcon /> },
   { name: "SQL", icon: <SQLIcon /> },
+  { name: "Nextjs", icon: <NextjsIcon /> },
+  { name: "Supabase", icon: <SupabaseIcon /> },
+  { name: "Typescript", icon: <TypescriptIcon /> },
+  { name: "Tailwindcss", icon: <TailwindcssIcon /> },
   { name: "MongoDB", icon: <MongoDBIcon /> },
   { name: "NodeJS", icon: <NodejsIcon /> },
   { name: "ExpressJS", icon: <ExpressIcon /> },
