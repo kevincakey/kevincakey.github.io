@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/NavBar/Navbar";
@@ -13,12 +13,28 @@ import "@dotlottie/react-player/dist/index.css";
 import resumeIcon from "./assets/icons/resumeIcon.lottie";
 import resume from "./assets/KevinGao'sResume.pdf";
 
+// Custom hook for mobile detection
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
+
 function App() {
   const location = useLocation();
   const isHome = location.pathname === "/";
-
-  // Function to check if the screen size is mobile
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = useIsMobile();
 
   return (
     <div className="App">
@@ -47,6 +63,7 @@ function App() {
               href={resume}
               target="_blank"
               rel="noreferrer"
+              aria-label="View Kevin Gao's resume on mobile"
             >
               <div></div>
             </a>

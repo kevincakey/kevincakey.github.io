@@ -9,9 +9,28 @@ import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Custom hook for mobile detection
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
+
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const isMobile = useIsMobile();
 
   let navbarClass = "navbar-container";
 
@@ -55,8 +74,6 @@ const Navbar = () => {
     "/Projects": "0%",
     "/Contact": "0%",
   };
-
-  const isMobile = window.innerWidth <= 768;
 
   // Determine which property to use for positioning based on screen size
   const positionProperty = isMobile ? "x" : "y";
@@ -115,7 +132,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
           >
-            <Link to="/">
+            <Link to="/" aria-label="Navigate to Home page">
               <DotLottiePlayer
                 src={homeIcon}
                 loop
@@ -130,7 +147,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
           >
-            <Link to="/About">
+            <Link to="/About" aria-label="Navigate to About page">
               <DotLottiePlayer
                 src={aboutIcon}
                 loop
@@ -145,7 +162,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
           >
-            <Link to="/Projects">
+            <Link to="/Projects" aria-label="Navigate to Projects page">
               <div className="icon-background">
                 <DotLottiePlayer
                   src={projectsIcon}
@@ -162,7 +179,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 1, stiffness: 20 }}
           >
-            <Link to="/Contact">
+            <Link to="/Contact" aria-label="Navigate to Contact page">
               <div className="icon-background">
                 <DotLottiePlayer
                   src={contactIcon}

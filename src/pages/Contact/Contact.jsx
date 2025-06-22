@@ -21,21 +21,20 @@ const Contact = () => {
     // Send email using emailjs
     emailjs
       .sendForm(
-        "service_qp35vwp",
-        "template_3r0uxfb",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_qp35vwp",
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_3r0uxfb",
         e.target,
-        "e1QQRubcOVbnDZGk_"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "e1QQRubcOVbnDZGk_"
       )
       .then(
         (result) => {
-          console.log(result.text);
           setShowSuccessPopup(true);
           setTimeout(() => {
             setShowSuccessPopup(false);
           }, 3000); // Close the success popup after 3 seconds
         },
         (error) => {
-          console.log(error.text);
+          setEmailError("Failed to send email. Please try again.");
         }
       );
 

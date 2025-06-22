@@ -26,6 +26,7 @@ const ProjectCard = ({
         target="_blank"
         rel="noopener noreferrer"
         className="card-link"
+        aria-label={`Visit ${name} project`}
       >
         <div
           className="project-description"

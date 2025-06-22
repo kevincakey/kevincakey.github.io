@@ -49,6 +49,7 @@ const Banner = () => {
       setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
     }, 5000);
     // Clean up the interval on component unmount
+    return () => clearInterval(interval);
   }, [phrases]);
 
   return (
@@ -68,6 +69,7 @@ const Banner = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/kevincakey/"
+              aria-label="Visit Kevin Gao's LinkedIn profile"
             >
               <LinkedinIcon id="linkedin-icon" />
               https://www.linkedin.com/in/kevincakey
@@ -79,6 +81,7 @@ const Banner = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/kevincakey"
+              aria-label="Visit Kevin Gao's GitHub profile"
             >
               <GithubIcon id="github-icon" />
               https://github.com/kevincakey
@@ -99,7 +102,12 @@ const Banner = () => {
               {phrases[phraseIndex]}
             </motion.p>
           </AnimatePresence>
-          <Link to="/Contact" id="contactButton" className="links">
+          <Link
+            to="/Contact"
+            id="contactButton"
+            className="links"
+            aria-label="Navigate to Contact page"
+          >
             Add me to your team !
           </Link>
           <div id="viewResume">
@@ -108,6 +116,7 @@ const Banner = () => {
               href={resume}
               target="_blank"
               rel="noreferrer"
+              aria-label="View Kevin Gao's resume"
             >
               <div></div>
             </a>
@@ -126,6 +135,7 @@ const Banner = () => {
             target="_blank"
             rel="noreferrer"
             download="Kevin_Gao's_Resume"
+            aria-label="Download Kevin Gao's resume"
           >
             <button id="resume-button" className="links">
               Download Resume
