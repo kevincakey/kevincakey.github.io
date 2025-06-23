@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   const containerVariants = {
     hidden: {
-      x: "-100vw",
+      x: "200vw",
       filter: "blur(100px)",
     },
     visible: {

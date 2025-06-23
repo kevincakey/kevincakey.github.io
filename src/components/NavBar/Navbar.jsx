@@ -79,40 +79,35 @@ const Navbar = () => {
   const positionProperty = isMobile ? "x" : "y";
   const antipositionProperty = positionProperty === "x" ? "y" : "x";
 
+  // Determine navbar width and background color based on route
+  const isHome = currentPath === "/";
+  const navbarWidth = isMobile ? "100vw" : isHome ? "100vw" : "5vw";
+  const navbarBg = isHome ? "rgba(0,0,0,0)" : "#ddb892";
+  // Animate icons from left (home) to right (sidebar)
+  const iconsX = isMobile ? 0 : isHome ? "-47vw" : 0;
+
   return (
     <motion.div
       className={navbarClass}
-      initial={{ backgroundColor: "#7F5539" }}
-      animate={
-        isMobile
-          ? { backgroundColor: "#7F5539" }
-          : { backgroundColor: currentPath === "/" ? "#7F5539" : "#ddb892" }
-      }
-      transition={{ duration: 0.2 }}
+      initial={{ width: navbarWidth, backgroundColor: navbarBg }}
+      animate={{ width: navbarWidth, backgroundColor: navbarBg }}
+      transition={{
+        width: { duration: 0.6, type: "spring" },
+        backgroundColor: { duration: 0.4 },
+      }}
     >
       <div id="topCake"></div>
-      <AnimatePresence>
-        {showMsg && (
-          <motion.div
-            id="clickMsg"
-            initial={{ x: "100vw" }}
-            animate={{ x: 0, y: 20 }}
-            transition={{ type: "spring", stiffness: 20 }}
-            exit={{
-              opacity: 0,
-              transition: { duration: 2, type: "tween" },
-            }}
-          >
-            Click Me!
-          </motion.div>
-        )}
-      </AnimatePresence>
+
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 5 }}
       >
-        <motion.ul id="navbar-icons">
+        <motion.ul
+          id="navbar-icons"
+          animate={{ x: iconsX }}
+          transition={{ type: "spring", duration: 0.7 }}
+        >
           <motion.div
             className="highlight-bar"
             initial={{ opacity: 0 }}
@@ -128,7 +123,7 @@ const Navbar = () => {
           ></motion.div>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "100vw" }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
           >
@@ -143,7 +138,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "100vw" }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
           >
@@ -158,7 +153,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "100vw" }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
           >
@@ -175,7 +170,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "100vw" }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 1, stiffness: 20 }}
           >
