@@ -86,6 +86,9 @@ const Navbar = () => {
   // Animate icons from left (home) to right (sidebar)
   const iconsX = isMobile ? 0 : isHome ? "-47vw" : 0;
 
+  // Determine icon animation direction
+  const iconInitialX = isMobile ? "100vw" : isHome ? "-100vw" : "100vw";
+
   return (
     <motion.div
       className={navbarClass}
@@ -123,7 +126,7 @@ const Navbar = () => {
           ></motion.div>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "-100vw" }}
+            initial={{ x: iconInitialX }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
           >
@@ -138,7 +141,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "-100vw" }}
+            initial={{ x: iconInitialX }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
           >
@@ -153,7 +156,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "-100vw" }}
+            initial={{ x: iconInitialX }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
           >
@@ -170,7 +173,7 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: "-100vw" }}
+            initial={{ x: iconInitialX }}
             animate={{ x: 0 }}
             transition={{ type: "spring", delay: 1, stiffness: 20 }}
           >
