@@ -102,14 +102,6 @@ const Banner = () => {
               {phrases[phraseIndex]}
             </motion.p>
           </AnimatePresence>
-          <Link
-            to="/Contact"
-            id="contactButton"
-            className="links"
-            aria-label="Navigate to Contact page"
-          >
-            Add me to your team !
-          </Link>
           <div id="viewResume">
             <a
               id="view-resume-link"
