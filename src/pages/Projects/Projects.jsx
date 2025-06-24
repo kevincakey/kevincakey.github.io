@@ -19,13 +19,89 @@ import { ReactComponent as NextjsIcon } from "../../assets/icons/nextjsIcon.svg"
 import { ReactComponent as SupabaseIcon } from "../../assets/icons/supabaseIcon.svg";
 import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescriptIcon.svg";
 import { ReactComponent as TailwindcssIcon } from "../../assets/icons/tailwindcssIcon.svg";
+import { ReactComponent as StripeIcon } from "../../assets/icons/stripeicon.svg";
+import { ReactComponent as ReduxIcon } from "../../assets/icons/reduxicon.svg";
+import { ReactComponent as KafkaIcon } from "../../assets/icons/kafkaicon.svg";
+import { ReactComponent as RedshiftIcon } from "../../assets/icons/redshift.svg";
+import { ReactComponent as PythonIcon } from "../../assets/icons/pythonIcon.svg";
+import { ReactComponent as SQLIcon } from "../../assets/icons/sqlIcon.svg";
+import { ReactComponent as PowerbiIcon } from "../../assets/icons/powerbiicon.svg";
+
 import { ReactComponent as TodoIcon } from "../../assets/icons/todoIcon.svg";
 import { ReactComponent as EventmakerIcon } from "../../assets/icons/eventmakerIcon.svg";
+import { ReactComponent as ElectionIcon } from "../../assets/icons/election.svg";
+import { ReactComponent as ArtIcon } from "../../assets/icons/art.svg";
+import { ReactComponent as WarehouseIcon } from "../../assets/icons/warehouse.svg";
+import { ReactComponent as CarIcon } from "../../assets/icons/car.svg";
+import { ReactComponent as SpaIcon } from "../../assets/icons/spa.svg";
 
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const projectIcons = [
+    {
+      name: "Full-stack Admin Platform",
+      emblem: <SpaIcon />,
+      description:
+        "Full-stack platform to digitize and streamline use and storage of bookings, medical records, and customer forms",
+      iconData: [
+        { icon: <NextjsIcon /> },
+        { icon: <SupabaseIcon /> },
+        { icon: <TypescriptIcon /> },
+        { icon: <TailwindcssIcon /> },
+      ],
+    },
+    {
+      name: "Uber Replica",
+      emblem: <CarIcon />,
+      website: "https://github.com/Najel-A/UberClone",
+      description:
+        "Full-stack clones of Uber Eats and Uber with microservice architecture",
+      iconData: [
+        { icon: <MongoDBIcon /> },
+        { icon: <ReactIcon /> },
+        { icon: <ReduxIcon /> },
+        { icon: <KafkaIcon /> },
+      ],
+    },
+    {
+      name: "Traffic Data Warehouse ETL Pipeline",
+      emblem: <WarehouseIcon />,
+      description:
+        "ETL pipeline for raw data from Amazon S3 to load into Redshift for efficient querying using a star schema",
+      iconData: [
+        { icon: <PythonIcon /> },
+        { icon: <SQLIcon /> },
+        { icon: <PowerbiIcon /> },
+        { icon: <RedshiftIcon /> },
+      ],
+    },
+
+    {
+      name: "E-commerce Art Gallery",
+      emblem: <ArtIcon />,
+      website: "https://opentheop.vercel.app/",
+      description: "Cart functionality and payment-supported art gallery",
+      iconData: [
+        { icon: <NextjsIcon /> },
+        { icon: <SupabaseIcon /> },
+        { icon: <TypescriptIcon /> },
+        { icon: <TailwindcssIcon /> },
+      ],
+    },
+    {
+      name: "Mayoral Candidate Site",
+      emblem: <ElectionIcon />,
+      website: "https://www.keepfremontsafe.com/",
+      description:
+        "Automatic mailing list, donations, SEO, accessibility, mobile view in a campaign website for a local mayoral candidate.",
+      iconData: [
+        { icon: <NextjsIcon /> },
+        { icon: <SupabaseIcon /> },
+        { icon: <TypescriptIcon /> },
+        { icon: <StripeIcon /> },
+      ],
+    },
     {
       name: "Events Planner",
       emblem: <EventmakerIcon />,
