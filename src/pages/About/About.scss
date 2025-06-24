@@ -18,10 +18,14 @@
   
   .icon-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(5vw, 1fr)); /* Adjust as needed */
+	grid-template-columns: repeat(8, 1fr); /* Fixed 8 columns for rectangular shape */
 	grid-gap: 2vw; /* Adjust the gap between icons */
 	list-style: none;
-	padding: 0;
+	padding: 2vw;
+	margin-top: 3vh;
+	background-color: #b18b66;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
   }
   
   .icon-grid li {
@@ -31,8 +35,8 @@
   }
   
   .svgIcons {
-	height: 3vw;
-	width: 3vw;
+	height: 2vw;
+	width: 2vw;
   }
 
   .svgIcons {

@@ -21,6 +21,14 @@ import { ReactComponent as NextjsIcon } from "../../assets/icons/nextjsIcon.svg"
 import { ReactComponent as SupabaseIcon } from "../../assets/icons/supabaseIcon.svg";
 import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescriptIcon.svg";
 import { ReactComponent as TailwindcssIcon } from "../../assets/icons/tailwindcssIcon.svg";
+import { ReactComponent as DockerIcon } from "../../assets/icons/dockericon.svg";
+import { ReactComponent as KafkaIcon } from "../../assets/icons/kafkaicon.svg";
+import { ReactComponent as MysqlIcon } from "../../assets/icons/mysqlicon.svg";
+import { ReactComponent as NpmIcon } from "../../assets/icons/npmicon.svg";
+import { ReactComponent as PostmanIcon } from "../../assets/icons/postman.svg";
+import { ReactComponent as PowerbiIcon } from "../../assets/icons/powerbiicon.svg";
+import { ReactComponent as ReduxIcon } from "../../assets/icons/reduxicon.svg";
+import { ReactComponent as StripeIcon } from "../../assets/icons/stripeicon.svg";
 import { motion } from "framer-motion";
 import teachingresume from "../../assets/TeachingResume.pdf";
 
@@ -46,6 +54,14 @@ const iconData = [
   { name: "NumPy", icon: <NumPyIcon /> },
   { name: "Java", icon: <JavaIcon /> },
   { name: "JQuery", icon: <JQueryIcon /> },
+  { name: "Docker", icon: <DockerIcon /> },
+  { name: "Kafka", icon: <KafkaIcon /> },
+  { name: "MySQL", icon: <MysqlIcon /> },
+  { name: "NPM", icon: <NpmIcon /> },
+  { name: "Postman", icon: <PostmanIcon /> },
+  { name: "Power BI", icon: <PowerbiIcon /> },
+  { name: "Redux", icon: <ReduxIcon /> },
+  { name: "Stripe", icon: <StripeIcon /> },
 ];
 
 const About = () => {
