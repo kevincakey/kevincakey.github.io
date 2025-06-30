@@ -126,7 +126,7 @@ const Banner = () => {
             href={resume}
             target="_blank"
             rel="noreferrer"
-            download="Kevin_Gao's_Resume"
+            download="KevinGao'sResume"
             aria-label="Download Kevin Gao's resume"
           >
             <button id="resume-button" className="links">
