@@ -49,12 +49,18 @@
 	color: #b08968;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 400px) {
     #cover {
 		width: 100vw;
         top:0;
 		left:0;
         height: 50vh;}
+
+		.lottie-container {
+			position:fixed;
+			width:400px;
+			height:400px;
+		}
 
 	#HomeContainer {
 		top:5vh;
