@@ -32,19 +32,6 @@ const Navbar = () => {
   const currentPath = location.pathname;
   const isMobile = useIsMobile();
 
-  let navbarClass = "navbar-container";
-
-  // Add additional conditions as needed for different routes
-  if (currentPath === "/") {
-    navbarClass += " home-route";
-  } else if (currentPath === "/About") {
-    navbarClass += " about-route";
-  } else if (currentPath === "/Projects") {
-    navbarClass += " projects-route";
-  } else if (currentPath === "/Contact") {
-    navbarClass += " contact-route";
-  }
-
   const [showMsg, setShowMsg] = useState(false);
 
   useEffect(() => {
@@ -82,8 +69,11 @@ const Navbar = () => {
   // Determine navbar width and background color based on route
   const isHome = currentPath === "/";
   const navbarWidth = isMobile ? "100vw" : isHome ? "100vw" : "5vw";
-  const navbarBg = isHome ? "rgba(0,0,0,0)" : "#ddb892";
-  // Animate icons from left (home) to right (sidebar)
+  const navbarBg = isMobile
+    ? "#7F5539" // dark brown for mobile (same color on all pages)
+    : isHome
+    ? "rgba(0,0,0,0)" // transparent for desktop Home
+    : "#ddb892"; // light brown for desktop when not on home page
   const iconsX = isMobile ? 0 : isHome ? "-47vw" : 0;
 
   // Determine icon animation direction
@@ -91,7 +81,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={navbarClass}
+      className={"navbar-container"}
       initial={{ width: navbarWidth, backgroundColor: navbarBg }}
       animate={{ width: navbarWidth, backgroundColor: navbarBg }}
       transition={{
@@ -99,8 +89,6 @@ const Navbar = () => {
         backgroundColor: { duration: 0.4 },
       }}
     >
-      <div id="topCake"></div>
-
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -190,7 +178,6 @@ const Navbar = () => {
           </motion.li>
         </motion.ul>
       </motion.nav>
-      <div id="cakeBase"></div>
     </motion.div>
   );
 };

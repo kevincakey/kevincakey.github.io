@@ -62,31 +62,27 @@ const Banner = () => {
         exit="exit"
       >
         <div id="backdrop"></div>
-        <div id="topCake">
-          <div className="social-icons" id="linkedin">
-            <a
-              className="links"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/kevincakey/"
-              aria-label="Visit Kevin Gao's LinkedIn profile"
-            >
-              <LinkedinIcon id="linkedin-icon" />
-              https://www.linkedin.com/in/kevincakey
-            </a>
-          </div>
-          <div className="social-icons" id="github">
-            <a
-              className="links"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/kevincakey"
-              aria-label="Visit Kevin Gao's GitHub profile"
-            >
-              <GithubIcon id="github-icon" />
-              https://github.com/kevincakey
-            </a>
-          </div>
+        <div className="social-icons" id="linkedin">
+          <a
+            className="links"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/kevincakey/"
+            aria-label="Visit Kevin Gao's LinkedIn profile"
+          >
+            <LinkedinIcon id="linkedin-icon" />
+          </a>
+        </div>
+        <div className="social-icons" id="github">
+          <a
+            className="links"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/kevincakey"
+            aria-label="Visit Kevin Gao's GitHub profile"
+          >
+            <GithubIcon id="github-icon" />
+          </a>
         </div>
         <div id="bannerBody">
           <p className="bannerText">{bannerText}</p>
@@ -120,20 +116,18 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div id="cakeBase">
-          <a
-            id="resume-link"
-            href={resume}
-            target="_blank"
-            rel="noreferrer"
-            download="KevinGao'sResume"
-            aria-label="Download Kevin Gao's resume"
-          >
-            <button id="resume-button" className="links">
-              Download Resume
-            </button>
-          </a>
-        </div>
+        <a
+          id="resume-link"
+          href={resume}
+          target="_blank"
+          rel="noreferrer"
+          download="KevinGao'sResume"
+          aria-label="Download Kevin Gao's resume"
+        >
+          <button id="resume-button" className="links">
+            Download Resume
+          </button>
+        </a>
       </motion.div>
     </AnimatePresence>
   );
