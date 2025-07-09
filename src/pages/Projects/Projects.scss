@@ -67,9 +67,10 @@
 		position:absolute;
 		top: 16vh;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr)); /* Adjust column width */
-		grid-gap: 4vw; /* Adjust gap between cards */
-		max-width: 80vw; /* Adjust maximum width of the grid */
-		margin: 8vh auto; /* Center the grid horizontally and add margin */
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2vw;
+		max-width: 96vw;
+		margin: 8vh auto;
+		padding-bottom: 8vh;
 	}
 }

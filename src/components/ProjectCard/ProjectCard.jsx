@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./ProjectCard.scss";
 
+const isMobile = () =>
+  typeof window !== "undefined" && window.innerWidth <= 768;
+
 const ProjectCard = ({
   name,
   icons,
@@ -10,13 +13,26 @@ const ProjectCard = ({
   description,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (!isMobile()) setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    if (!isMobile()) setIsHovered(false);
+  };
+
+  const handleCardClick = (e) => {
+    if (isMobile()) {
+      e.preventDefault(); // Prevent link navigation on mobile click
+      setModalOpen(true);
+    }
+  };
+
+  const handleModalClose = (e) => {
+    e.stopPropagation();
+    setModalOpen(false);
   };
 
   return (
@@ -27,18 +43,22 @@ const ProjectCard = ({
         rel="noopener noreferrer"
         className="card-link"
         aria-label={`Visit ${name} project`}
+        onClick={handleCardClick}
       >
-        <div
-          className="project-description"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            opacity: isHovered ? "1" : "0",
-          }}
-        >
-          <h3 className="project-name">{name}</h3>
-          {description}
-        </div>
+        {/* Only show hover description on desktop */}
+        {!isMobile() && (
+          <div
+            className="project-description"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              opacity: isHovered ? "1" : "0",
+            }}
+          >
+            <h3 className="project-name">{name}</h3>
+            {description}
+          </div>
+        )}
 
         <div
           className="card"
@@ -62,6 +82,21 @@ const ProjectCard = ({
           </div>
         </div>
       </a>
+      {/* Modal for mobile */}
+      {modalOpen && isMobile() && (
+        <div className="project-modal" onClick={handleModalClose}>
+          <div
+            className="project-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="modal-close" onClick={handleModalClose}>
+              &times;
+            </button>
+            <h3 className="project-name">{name}</h3>
+            <div className="modal-description">{description}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
