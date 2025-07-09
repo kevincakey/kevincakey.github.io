@@ -9,28 +9,34 @@ import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Custom hook for mobile detection
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.innerWidth <= breakpoint;
+  });
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const updateMobile = () => {
+      setIsMobile(window.innerWidth <= breakpoint);
     };
-
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
+    window.addEventListener("resize", updateMobile);
+    updateMobile(); // check on mount
+    return () => window.removeEventListener("resize", updateMobile);
+  }, [breakpoint]);
 
   return isMobile;
-};
+}
 
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const isMobile = useIsMobile();
+  console.log(
+    "isMobile:",
+    isMobile,
+    "matchMedia:",
+    window.matchMedia("(max-width: 768px)").matches
+  );
 
   const [showMsg, setShowMsg] = useState(false);
 
@@ -77,7 +83,8 @@ const Navbar = () => {
   const iconsX = isMobile ? 0 : isHome ? "-47vw" : 0;
 
   // Determine icon animation direction
-  const iconInitialX = isMobile ? "100vw" : isHome ? "-100vw" : "100vw";
+  const iconInitialX = isMobile ? "0vw" : isHome ? "-100vw" : "100vw";
+  const iconInitialY = isMobile ? "-100vh" : "0";
 
   return (
     <motion.div
@@ -114,8 +121,8 @@ const Navbar = () => {
           ></motion.div>
           <motion.li
             className="navbar-icon"
-            initial={{ x: iconInitialX }}
-            animate={{ x: 0 }}
+            initial={{ x: iconInitialX, y: iconInitialY }}
+            animate={{ x: 0, y: 0 }}
             transition={{ type: "spring", delay: 0.4, stiffness: 20 }}
           >
             <Link to="/" aria-label="Navigate to Home page">
@@ -129,8 +136,8 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: iconInitialX }}
-            animate={{ x: 0 }}
+            initial={{ x: iconInitialX, y: iconInitialY }}
+            animate={{ x: 0, y: 0 }}
             transition={{ type: "spring", delay: 0.6, stiffness: 20 }}
           >
             <Link to="/About" aria-label="Navigate to About page">
@@ -144,8 +151,8 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: iconInitialX }}
-            animate={{ x: 0 }}
+            initial={{ x: iconInitialX, y: iconInitialY }}
+            animate={{ x: 0, y: 0 }}
             transition={{ type: "spring", delay: 0.8, stiffness: 20 }}
           >
             <Link to="/Projects" aria-label="Navigate to Projects page">
@@ -161,8 +168,8 @@ const Navbar = () => {
           </motion.li>
           <motion.li
             className="navbar-icon"
-            initial={{ x: iconInitialX }}
-            animate={{ x: 0 }}
+            initial={{ x: iconInitialX, y: iconInitialY }}
+            animate={{ x: 0, y: 0 }}
             transition={{ type: "spring", delay: 1, stiffness: 20 }}
           >
             <Link to="/Contact" aria-label="Navigate to Contact page">
