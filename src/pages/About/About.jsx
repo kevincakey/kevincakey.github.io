@@ -122,22 +122,18 @@ const About = () => {
         exit="exit"
       >
         <div id="about-body">
-          <h2>
-            Exploring software development and data science. <br />
-            Looking for opportunities to learn and apply skills. <br />
-          </h2>
           <h3>
-            Open to full/part-time jobs, internships, website contracting, and
-            <a
-              href={teachingresume}
-              target="_blank"
-              rel="noreferrer"
-              id="teaching-link"
-            >
-              {" "}
-              tutoring
-            </a>
+            <em>Hi! I’m Kevin,</em>
           </h3>
+          <p>
+            a technically <em> versatile </em> problem solver with a focus on{" "}
+            <em>scalable</em> systems, human-centered technology, and{" "}
+            <em> data-driven </em> decisions. Working directly with clients,
+            leading team projects, and teaching students has sharpened my
+            strengths in leadership, communication, and collaboration. If you
+            think I’d be a good fit for your team,{" "}
+            <strong>let’s connect.</strong>
+          </p>
           <ul className="icon-grid">
             {iconData.map((icon, index) => (
               <li

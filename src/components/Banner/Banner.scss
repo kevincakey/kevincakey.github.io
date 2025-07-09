@@ -185,3 +185,14 @@
 //         height: 50vh;
 //     }
 // }
+
+@media screen and (max-width: 400px) {	
+	#resumeIcon {
+        position: absolute;
+        width: 40vw;
+        height: 46vh;
+        display: flex;
+        bottom: -9vh; /* Adjust as needed */
+        right: -1vw; /* Adjust as needed */
+        z-index: 1;
+    }}
