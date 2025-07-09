@@ -62,28 +62,7 @@ const Banner = () => {
         exit="exit"
       >
         <div id="backdrop"></div>
-        <div className="social-icons" id="linkedin">
-          <a
-            className="links"
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/kevincakey/"
-            aria-label="Visit Kevin Gao's LinkedIn profile"
-          >
-            <LinkedinIcon id="linkedin-icon" />
-          </a>
-        </div>
-        <div className="social-icons" id="github">
-          <a
-            className="links"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/kevincakey"
-            aria-label="Visit Kevin Gao's GitHub profile"
-          >
-            <GithubIcon id="github-icon" />
-          </a>
-        </div>
+
         <div id="bannerBody">
           <p className="bannerText">{bannerText}</p>
           <AnimatePresence mode="wait">

@@ -1,5 +1,58 @@
+.social-icons {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vw;
+    z-index: 20;
+}
 
+.linkedin-social-icon {
+    position: fixed;
+    right: 0vw;
+    bottom: 0vw;
+    z-index: 20;
+}
 
+.github-social-icon {
+    position: fixed;
+    right: 0vw;
+    bottom: 2vw;
+    z-index: 20;
+}
+
+#github-icon,
+#linkedin-icon {
+    position: static;
+    width: 2vw;
+    height: 2vw;
+    min-width: 2vw;
+    min-height: 2vw;
+    margin: 0;
+    display: block;
+}
+
+#github {
+    // margin-right: auto; /* Push to the left */
+    bottom:4vh;
+    right:0vw;
+    margin-left:5vw;
+    margin-top:-0.2vh;
+    position:absolute;
+    z-index: 11;
+}
+
+#linkedin {
+    // margin-left: auto ; /* Push to the right */
+    // margin-right:auto;
+    position:absolute;
+    margin-top:-0.2vh;
+    bottom:8vh;
+    right:0vw;
+    z-index: 11;
+}
 .navbar-container{
 	background: #7F5539;
 	height: 100vh;
@@ -91,6 +144,25 @@
         height: 10vh; /* Increase height of icon background */
         width: 10vh; /* Set width of icon background */
         border-radius: 50%; /* Ensure rounded shape */
+    }
+
+    #github-icon,
+    #linkedin-icon {
+        width: 7vw;
+        height: 7vw;
+        min-width: 7vw;
+        min-height: 7vw;
+    }
+
+    .linkedin-social-icon {
+        left: 0vw;
+        right: auto;
+        bottom: 0vw;
+    }
+    .github-social-icon {
+        left: 0vw;
+        right: auto;
+        bottom: 6vw;
     }
 }
 

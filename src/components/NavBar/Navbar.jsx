@@ -8,6 +8,8 @@ import contactIcon from "../../assets/icons/contactIcon.lottie";
 import { DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
+import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(() => {
@@ -185,6 +187,50 @@ const Navbar = () => {
           </motion.li>
         </motion.ul>
       </motion.nav>
+      {/* LinkedIn Icon */}
+      <motion.div
+        className="linkedin-social-icon"
+        initial={{ x: isMobile ? "-100vw" : "100vw", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          duration: 1.8,
+          delay: 2.5,
+          stiffness: 30,
+        }}
+      >
+        <a
+          className="links"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/kevincakey/"
+          aria-label="Visit Kevin Gao's LinkedIn profile"
+        >
+          <LinkedinIcon id="linkedin-icon" />
+        </a>
+      </motion.div>
+      {/* GitHub Icon */}
+      <motion.div
+        className="github-social-icon"
+        initial={{ x: isMobile ? "-100vw" : "100vw", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          duration: 1.8,
+          delay: 2.2,
+          stiffness: 30,
+        }}
+      >
+        <a
+          className="links"
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/kevincakey"
+          aria-label="Visit Kevin Gao's GitHub profile"
+        >
+          <GithubIcon id="github-icon" />
+        </a>
+      </motion.div>
     </motion.div>
   );
 };

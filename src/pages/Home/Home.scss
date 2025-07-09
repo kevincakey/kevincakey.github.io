@@ -50,6 +50,18 @@
 	color: #b08968;
   }
 
+  @media screen and (max-width: 768px) {
+	#attribution {
+		position: absolute;
+		bottom: 3vh;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 0.3em;
+		color: #b08968;
+		text-align: center;
+	}
+  }
+
   @media screen and (max-width: 400px) {
     #cover {
 		width: 100vw;
@@ -69,9 +81,11 @@
 
 	#attribution {
 		position: absolute;
-		bottom: 6vh;
-		left: 1vw;
+		bottom: 8vh;
+		left: 50%;
+		transform: translateX(-50%);
 		font-size: 0.3em;
 		color: #b08968;
-	  }
+		text-align: center;
+	}
 }
