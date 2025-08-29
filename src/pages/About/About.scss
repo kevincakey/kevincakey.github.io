@@ -97,16 +97,16 @@ h3 {
 	#about-container {
 		width: 100vw;
 		height: 100vh;
-		padding: 2vw;
 		max-width: 100vw;
 	}
 	
 	#about-body {
-		position: fixed;
+		position: relative;
 		top: 20vh;
-		right: 0;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 4vw;
-		max-width: 100vw;
+		max-width: 80vw;
 		font-size: small;
 	}
 	
@@ -144,4 +144,33 @@ h3 {
 		height: 6vw;
 		width: 6vw;
 	}
+}
+
+@media screen and (max-width: 440px) {	.icon-grid {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height:40vh;
+	width: 88vw;
+	grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
+	grid-gap: 4vw;
+	padding: 2vw 4vw;
+	margin: 0;
+	z-index: 20;
+	overflow-x: auto;
+	background-color: #b18b66ee;
+	box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+	border: 2vw solid #7F5539;
+	border-radius: 8px;
+	left: 0vw;
+}
+
+.icon-grid li {
+	min-width: 12vw;
+}
+
+.svgIcons {
+	height: 8vw;
+	width: 8vw;
+}
 }
