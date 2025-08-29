@@ -1,18 +1,20 @@
+/* Desktop View (1024x1366 and above) */
 #about-container {
 	color: #ddb892;
 	font-family: 'itim';
-	max-width: 900px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2vw;
 }
 
 #about-body {
-	
-	padding: 5vw;
-	font-size:0.6em;
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
+	padding: 3vw;
+	font-size: 0.8em;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 4vh;
 }
 
 h2 {
@@ -29,37 +31,34 @@ h3 {
 .icon-grid {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
-	grid-gap: 2vw;
+	grid-gap: 1.5vw;
 	list-style: none;
-	padding: 3vw;
-	margin-top: 3vh;
+	padding: 2vw;
+	margin: 0 auto;
 	background-color: #b18b66;
 	backdrop-filter: blur(10px);
 	justify-items: center;
 	align-items: center;
 	width: fit-content;
-	margin-left: auto;
-	margin-right: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .icon-grid li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .svgIcons {
-	height: 2vw;
-	width: 2vw;
+	height: 2.5vw;
+	width: 2.5vw;
 	transition: filter 0.3s;
 }
 
 .blur {
 	filter: blur(5px);
-}
-
-.icon-grid li {
-	position: relative;
 }
 
 .icon-grid li span {
@@ -68,13 +67,15 @@ h3 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #ffffff;
-	font-size: clamp(12px, 2vw, 16px);
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 5px 10px;
-	border-radius: 5px;
+	font-size: clamp(12px, 1.5vw, 16px);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 8px 12px;
+	border-radius: 6px;
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	pointer-events: none;
+	white-space: nowrap;
+	z-index: 10;
 }
 
 .icon-grid li:hover span {
@@ -91,33 +92,39 @@ h3 {
 	}
 }
 
-@media screen and (max-width: 768px) {
+/* Mobile View (up to 1024x1366) */
+@media screen and (max-width: 1024px) {
 	#about-container {
-	width:96vw;
-	height:100vh;
-		padding: 2vw 2vw 0 2vw;
+		width: 100vw;
+		height: 100vh;
+		padding: 2vw;
 		max-width: 100vw;
 	}
+	
 	#about-body {
-		position:fixed;
-		top:20vh;
-		right:0;
+		position: fixed;
+		top: 20vh;
+		right: 0;
 		padding: 4vw;
 		max-width: 100vw;
+		font-size: small;
 	}
+	
 	h2 {
 		font-size: clamp(1em, 4vw, 1.2em);
 	}
+	
 	h3 {
 		font-size: clamp(0.9em, 3vw, 1.1em);
 	}
+	
 	.icon-grid {
 		position: fixed;
 		left: 0;
 		bottom: 0;
 		width: 88vw;
 		grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
-		grid-gap: 6vw;
+		grid-gap: 4vw;
 		padding: 2vw 4vw;
 		margin: 0;
 		z-index: 20;
@@ -128,29 +135,13 @@ h3 {
 		border-radius: 8px;
 		left: 0vw;
 	}
+	
 	.icon-grid li {
 		min-width: 12vw;
 	}
-	.svgIcons {
-		height: 8vw;
-		width: 8vw;
-	}
-}
-
-@media screen and (max-width: 400px) {	
-	#about-body {
-	font-size:small;
-	position:fixed;
-	top:20vh;
-	right:0;
-	padding: 10vw;
-	max-width: 100vw;
-	}
 	
-	.icon-grid {
-		border: 2vw solid #7F5539;
-		border-radius: 8px;
-		width: 88vw;
-		left: 0vw;
+	.svgIcons {
+		height: 6vw;
+		width: 6vw;
 	}
 }

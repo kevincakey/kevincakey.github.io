@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ProjectCard.scss";
 
 const isMobile = () =>
-  typeof window !== "undefined" && window.innerWidth <= 768;
+  typeof window !== "undefined" && window.innerWidth <= 1024;
 
 const ProjectCard = ({
   name,

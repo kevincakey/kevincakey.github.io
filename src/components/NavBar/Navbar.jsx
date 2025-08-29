@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ReactComponent as GithubIcon } from "../../assets/icons/githubIcon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedinIcon.svg";
 
-function useIsMobile(breakpoint = 768) {
+function useIsMobile(breakpoint = 1024) {
   const [isMobile, setIsMobile] = useState(() => {
     if (typeof window === "undefined") return false;
     return window.innerWidth <= breakpoint;
@@ -37,7 +37,7 @@ const Navbar = () => {
     "isMobile:",
     isMobile,
     "matchMedia:",
-    window.matchMedia("(max-width: 768px)").matches
+    window.matchMedia("(max-width: 1024px)").matches
   );
 
   const [showMsg, setShowMsg] = useState(false);
